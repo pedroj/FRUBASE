@@ -1,6 +1,6 @@
-######################################################################################
+###########################################################################
 ### FRUBASE. July 2007. Freiburg. Nov 2007, Sevilla.
-######################################################################################
+###########################################################################
 frubase<-read.table("frubase.txt",header=TRUE,sep="\t",dec=".",na.strings="NA")
 
 str(frubase)
@@ -37,7 +37,15 @@ str(frubase)
  $ nsc    : num  0.72 0.26 0.74 0.12 0.29 0.89 0.44 0.37 NA NA ...
  $ ash    : num  0.07 0.03 0.03 NA 0.03 0.03 NA 0.02 NA NA ...
  $ fib    : num  0.14 0.08 NA 0.08 0.06 NA 0.23 0.18 NA NA ...
-  
+
+# Using taxize
+require(taxize)
+frub_sp<-frubase$species    # The species taxon list
+
+mynames<- frub_sp[1:10]
+mylist<- get_ids(names=mynames, db = c('ncbi','itis','col','tropicos'))
+
+
 ### Datasets
 nfrubase<-frubase[,17:32] # Numeric data only
 
@@ -74,7 +82,7 @@ fintegr.nutr
 fmm2<-(ncol(frubnutrcor)-1)/length(nfrubase[,9]) # Maximum expected variance
 fintegr.nutr/ncol(frubnutrcor)
 
-#####################################################################################
+###########################################################################
 ### Phylogenetic analyses
 names(frubase)
 names(nfrubase)
