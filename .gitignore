@@ -28,3 +28,8 @@
 *.RData
 *.RHistory
 .DS_Store
+.Rproj.user
+*.Rproj
+*.pdf
+*.zip
+"FRUBASE Distribution.Rproj"
