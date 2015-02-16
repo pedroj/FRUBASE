@@ -38,15 +38,51 @@ str(frubase)
  $ ash    : num  0.07 0.03 0.03 NA 0.03 0.03 NA 0.02 NA NA ...
  $ fib    : num  0.14 0.08 NA 0.08 0.06 NA 0.23 0.18 NA NA ...
 
+# Filtering ---------------------------------------------------------------
+require(magrittr)
+require(dplyr)
+species<- paste(frubase$gen,frubase$sp,sep=" ")
+frubase<- data.frame(frubase[,1:6], species, frubase[,7:32])
+
+frubase_df<-tbl_df(frubase)
+
+frubase %>% filter(fam== "ANACARDIACEAE") %>% select(species) 
+
 # Using taxize
 require(taxize)
-frub_sp<-frubase$species    # The species taxon list
+mynames<-frubase %>% 
+            filter(fam== "ANACARDIACEAE") %>% 
+            select(species)    # The species taxon list
 
-mynames<- frub_sp[1:10]
 mylist<- get_ids(names=mynames, db = c('ncbi','itis','col','tropicos'))
 
+# Cleanup list -----------------------------------------------------------
+There are many ways to resolve taxonomic names in taxize. Of course, the ideal name resolver will do the work behind the scenes for you so that you dont have to do things like fuzzy matching. There are a few services in taxize like this we can choose from: One is the Taxonomic Name Resolution Service from iPlant (see function *tnrs*).
 
-### Datasets
+# The tnrs function accepts a vector of 1 or more
+mylist_tnrs <- tnrs(query=mynames, getpost="POST", source = "iPlant_TNRS")
+
+# Remove some fields
+
+mylist_tnrs <- mylist_tnrs[,!names(mylist_tnrs) %in% c("matchedName","annotations","uri")]
+
+# Note the scores. They suggest that there were no perfect matches, but they were all very close, ranging from 0.77 to 0.99 (1 is the highest). 
+# Let's assume the names in the "acceptedName" column are correct (and they should be).
+
+# So here's our updated species list
+mylist_final <- as.character(mylist_tnrs$acceptedname)
+```
+
+Another option is the Global Names Resolver service from EOL (see function *gnr_resolve*) and 
+
+```{r}
+sources <- gnr_datasources()
+eol <- sources$id[sources$title == 'EOL']
+out <- gnr_resolve(splist, data_source_ids=eol, stripauthority=TRUE)
+unique(out$results)
+```
+
+### Datasets --------------------------------------------------------------
 nfrubase<-frubase[,17:32] # Numeric data only
 
 ### Correlation matrices
