@@ -1,6 +1,7 @@
 ******************************** FRUBASE PACKAGE ******************************
 
                               VERSION 4.0. DEC 2007.
+                              Working on new version 5.0. Feb 2015!!
 
 THE FRUBASE PACKAGE ACCOMPANIES:
 
@@ -27,11 +28,11 @@ plants. Cambridge University Press, Cambridge, UK.
 
 Please, contact me if you have suggestions, find errors, inconsistencies, or
 any other bug in the file. As well, please let me know about your uses of this
-data and send manuscripts and reprints when available. I´ll be happy to help
+data and send manuscripts and reprints when available. I'll be happy to help
 you in any case, as far as I can.
 
 I am periodically updating this data base since I started writing my PhD 
-thesis more than 20 years ago. Thus, I´d like to receive suggestions for new
+thesis more than 20 years ago. Thus, I'd like to receive suggestions for new
 data sources and provide updated versions to those interested.
 
 Please, use these data files for peaceful purposes, enjoy doing science with
@@ -159,7 +160,7 @@ mammals in the evergreen forests of Upland Malawi. Rev. Ecol. (Terre Vie) 43:
 251-286.
 
 9. Erard, C., M. Thery and D. Sabatier. 1989. Regime alimentaire de Rupicola
-rupicola (Cotingidae) en Guyane française. Relations avec la frugivorie et la
+rupicola (Cotingidae) en Guyane fran√ßaise. Relations avec la frugivorie et la
 zoochorie. Rev. Ecol. (Terre Vie) 44: 47-74.
 
 10. Eriksson, O. and J. Ehrlen. 1991. Phenological variation in fruit
@@ -188,8 +189,8 @@ leendertziae. S. Afr. J. Bot. 2: 42-45.
 17. Herrera, C.M. 1987. Vertebrate-dispersed plants of the iberian peninsula: a
 study of fruit characteristics. Ecol. Monogr. 57: 305-331.
 
-18. Hladik, A. and C.M. Hladik. 1969. Rapports trophiques entre végetation et
-primates dans la fôret de Barro Colorado (Panama). Terre Vie 23: 25-117.
+18. Hladik, A. and C.M. Hladik. 1969. Rapports trophiques entre vegetation et
+primates dans la foret de Barro Colorado (Panama). Terre Vie 23: 25-117.
 
 19. Howe, H.F. 1981. Dispersal of neotropical nutmeg (Virola sebifera) by 
 birds. Auk 98: 88-98.
@@ -239,11 +240,11 @@ tropical trees. Phil. Trans. R. Soc. Lond. B 316: 303-333.
 33. Piper, J.K. 1986. Seasonality of fruit characters and seed removal by 
 birds. Oikos 46: 303-310.
 
-34. Restrepo, C. 1987. Aspectos ecológicos de la diseminación de cinco especies
-de muérdagos por aves. Humboldtia 1: 65-116.
+34. Restrepo, C. 1987. Aspectos ecologicos de la diseminacion de cinco especies
+de muerdagos por aves. Humboldtia 1: 65-116.
 
-35. Rogers, M.E., F. Maisels, E.A. Williamson, M. Fernández and C.E.G. Tutin.
-1990. Gorilla diet in the Lopé Reserve, Gabon: a nutritional analysis. 
+35. Rogers, M.E., F. Maisels, E.A. Williamson, M. Fernandez and C.E.G. Tutin.
+1990. Gorilla diet in the Lope Reserve, Gabon: a nutritional analysis. 
 Oecologia (Berl.) 84: 326-339.
 
 36. Sherburne, J.A. 1972. Effects of seasonal changes in the abundance and
@@ -297,23 +298,25 @@ Oecologia (Berl.) 80: 381-389.
 Contact me at:
 
 Pedro Jordano
-Departamento de Biología Evolutiva
-Estación Biologica de Donana, CSIC
-Pabellón del Peru, Avda. M. Luisa, S/N
-41013 Sevilla, Spain
+Departamento de Ecologia Integrativa
+Estacion Biologica de Do√±ana, CSIC
+Isla de La Cartuja
+Avda. Americo Vespucio, S/N
+41092 Sevilla, Spain
 
-Phone: +34 95 4232340 ext 213 (voice)
+Phone: +34 95 4466700 ext 1467 (voice)
        +34 95 4621125 (fax)
-       +34 95 4270463 (home, voice)
        
 e-mail: jordano@ebd.csic.es
+web: html://ebd10.ebd.csic.es
+tweeter: @pedro_jordano
 ***************************** ACKNOWLEDGEMENTS ********************************
 This data base is the result of many hours of work compiling names and numbers 
 from a very sparse literature. I've benefited from the help of Myriam Marquez,
-Alicia Prieto and Rocío Requerey, who aided carefully with data checking 
+Alicia Prieto and Rocio Requerey, who aided carefully with data checking 
 several times. Carlos M. Herrera helped with unpublished data and by providing 
-literature sources; his advice and comments were always invaluable. F.H.J. 
-Crome also provided his original data just at the start of this project. 
+literature sources. F.H.J. Crome also provided his original data just at the 
+start of this project. 
 Computer time and facilities were kindly provided by the Centro de Informatica 
 Cientifica de Andalucia. Financial support was from the Spanish Direccion 
 General de Investigacion Cientifica y Tecnica, projects PB-87-0452 and 
@@ -339,6 +342,10 @@ version 4.0 - A major update to the dataset, with revision of the taxonomic
               families of flowering plants: APG II. Bot. J. Linnean Soc. 141: 
               399-436.
               Revision completed 25 November 2007.
+version 5.0 - Working on a new updated dataset based on the Git repository.
+              Thorough checking the species names and taxonomy with R package
+              taxize. Adding new species to dataset from updated sources.
+              WORKING ON IT!!!
 *******************************************************************************
 
 Best wishes, and happy computing!
