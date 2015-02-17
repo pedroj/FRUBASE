@@ -1,7 +1,7 @@
 ###########################################################################
 ### FRUBASE. July 2007. Freiburg. Nov 2007, Sevilla.
+# Revision for v. 5 started in Sevilla, 17 Jan 2015.
 ###########################################################################
-frubase<-read.table("frubase.txt",header=TRUE,sep="\t",dec=".",na.strings="NA")
 # Get the data from my GitHub repository.
 require(downloader)
 link = "https://raw.githubusercontent.com/pedroj/frubase/master/frubase.txt"
@@ -56,15 +56,15 @@ require(dplyr)
 
 frubase_df<-tbl_df(frubase)
 
-frubase %>% filter(fam== "ANACARDIACEAE") %>% select(species) 
+frubase %>% filter(gen== "Vaccinium") %>% select(species, diam) 
 
 # Using taxize ------------------------------------------------------------
 require(taxize)
-mynames<-frubase %>% 
-            filter(fam== "ANACARDIACEAE") %>% 
+mynames<-frubase %>%     # mynames is a column vector with the taxa names.
+        #    filter(fam== "ANACARDIACEAE") %>% 
             select(species)    # The species taxon list
-
-mylist<- get_ids(names=mynames, db = c('ncbi','itis','col','tropicos'))
+tocheck<- mynames[1:100,]
+mylist<- get_ids(names=tocheck, db = c('ncbi','itis','col','tropicos'))
 
 # Cleanup list ------------------------------------------------------------
 There are many ways to resolve taxonomic names in taxize. Of course, the ideal name resolver will do the work behind the scenes for you so that you dont have to do things like fuzzy matching. There are a few services in taxize like this we can choose from: One is the Taxonomic Name Resolution Service from iPlant (see function *tnrs*).
