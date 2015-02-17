@@ -1,3 +1,56 @@
+# Variable names and descriptions in FRUBASE. See the FRUBASE_README file.
+# 
+#       CL        Class
+#       SCL       SubClass
+#       ORD       Order
+#       FAM       Family
+#       GEN       Genus
+#       SP        Species
+#       REF       Reference number - This is my maintenance code for updates.
+#       NEWREF    New Reference number - These are the refs numbers in the 
+#                                         files REFS and SUMMARY.
+#       FAMLAB    Family Label -  An 8-character label for family.
+#       GENLAB    Genus Label -   An 8-character label for genus.
+#       SPLAB     Species Label - An 8-character label for species.
+#       COD       Species code -  A 5-character code for the species.
+#       DISPCAT   Disperser type category - BIRDS, MIXED, MAMMALS.
+#       DISP      Disperser type - Finer categorization. Not yet completed.
+#                                   Needs revision.
+#       MEGAFAUNA Whether the fruit species is associated with dispersal 
+#                 of seeds by megafauna.
+#       AREA      Geographic area - Major geographic areas of the data
+#                   sources.
+#                  MEurope: Mediterranean Europe (also includes Israel and
+#                           Morocco.
+#                  NEurope: Temperate and Northern Europe.
+#                  NAmerica: North America, excl. Southern Mexico.
+#                  NTAmerica: Neotropical America, incl. Southern Mexico.
+#                  Africa: Africa, south of Sahara.
+#                  Australasia: Australia, Malaysia, New Guinea, and whole
+#                               SouthEast Asia.
+#       HABIT     Growth habit - Tree, Shrub, Liana, Herb.
+#       FRUIT     Fruit type - Type of fruit. Not completed yet. 
+#                               Needs revision.
+#       COLOR     Fruit color - 
+#                  Black, Blue, Red, Orange, Yellow, Green, Brown, White
+#       COMPCOLOR Whether the fruit is monocolored, bicolored, or multicolored.
+#       LENG      Fruit length (mm)
+#       DIAM      Fruit diameter (mm)
+#       FRFM      Fruit fresh mass (g)
+#       PDM       Dry mass of pulp per fruit (g)
+#       SDM       Dry mass of seed(s) per fruit (g)
+#       SEEDS     Number of seeds per fruit
+#       SEEDM     Seed dry mass (g)
+#       RY        Relative yield of pulp (PDM/FRFM*100)
+#       KJG       Specific energy content of pulp (kJ/g)
+#       KJFR      Total energy content per fruit (kJ)
+#       PCW       Percent water content of fruit
+#       LIP       Proportion of lipids (per g dry pulp)
+#       PRO       Proportion of protein (per g dry pulp)
+#       NSC       Proportion of non-structural carbohydrates (per g dry pulp)
+#       ASH       Proportion of minerals (per g dry pulp)
+#       FIB       Proportion of acid-detergent fiber (per g dry pulp)
+#
 cl	scl	ord	fam	gen	sp	ref	newref	famlab	genlab	splab	cod	dispcat	disp	area	fruit	leng	diam	frfm	pdm	sdm	seeds	seedm	ry	kjg	kjfr	pcw	lip	pro	nsc	ash	fib
 Magnoliopsida	Rosidae	Sapindales	ANACARDIACEAE	Harpehyllum	caffrum	36	43	ANACARDI	Harpehyl	caffrum	HCAF	Birds		Africa	Drupe1	22.2	10.6	1.1	NA	NA	1	NA	NA	13.6	NA	NA	0.02	0.06	0.72	0.07	0.14
 Magnoliopsida	Rosidae	Sapindales	ANACARDIACEAE	Pistacia	lentiscus	0	17	ANACARDI	Pistacia	lentiscu	PLEN	Birds		MEurope	Drupe1	5.2	5.3	0.1	0.03	0.03	1	0.03	28.3	30.01	0.87	46.8	0.59	0.06	0.26	0.03	0.08
