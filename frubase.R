@@ -55,7 +55,9 @@ require(magrittr)
 require(dplyr)
 
 frubase_df<-tbl_df(frubase)
-
+frubase %>%
+        extract(, 7:11) %>%
+        head
 frubase %>% filter(gen== "Vaccinium") %>% select(species, diam) 
 
 # Using taxize ------------------------------------------------------------
