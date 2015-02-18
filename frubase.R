@@ -63,7 +63,7 @@ require(taxize)
 mynames<-frubase %>%     # mynames is a column vector with the taxa names.
         #    filter(fam== "ANACARDIACEAE") %>% 
             select(species)    # The species taxon list
-tocheck<- mynames[1:100,]
+tocheck<- mynames[1:50,]
 mylist<- get_ids(names=tocheck, db = c('ncbi','itis','col','tropicos'))
 
 # Cleanup list ------------------------------------------------------------
