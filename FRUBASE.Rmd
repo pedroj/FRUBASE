@@ -1,0 +1,140 @@
+---
+title: "FRUBASE"
+output: html_notebook
+---
+
+July 2007. Freiburg. Nov 2007, Sevilla.
+Revision for v. 5 started in Sevilla, 17 Jan 2015.
+
+### Data input, etc.
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r dataset}
+# Get the data from my GitHub repository.
+require(downloader)
+link = "https://raw.githubusercontent.com/pedroj/frubase/master/frubase.txt"
+file = "frubase.txt"
+if(!file.exists(file)) download(link, file, mode = "wb")
+frubase <- read.table(file, sep = "\t", dec = ".", 
+                      header = TRUE, na.strings="NA")
+
+```
+
+Prepare dataset.
+
+```{r data_edit, echo=TRUE}
+# Add column with species names to use in taxa checks.
+species<- paste(frubase$gen,frubase$sp,sep=" ")
+frubase<- data.frame(frubase[,1:6], species, frubase[,7:32])
+str(frubase)
+
+```
+
+
+### Filtering 
+
+```{r filter, echo=TRUE}
+require(dplyr)
+frubase_df<-tbl_df(frubase)
+glimpse(frubase_df)
+frubase_df %>%
+        filter(gen== "Vaccinium") 
+
+by_fam.diam <- group_by(frubase_df, fam)
+diam.avg <- summarise(by_fam.diam,
+                      count = n(),
+                      diam.avg = mean(diam, na.rm = TRUE),
+                      diam.se = mean(diam, na.rm = TRUE))
+```
+
+### Taxa names check
+
+#### Cleanup list 
+
+There are many ways to resolve taxonomic names in `taxize`. Of course, the ideal name resolver will do the work behind the scenes for you so that you dont have to do things like fuzzy matching. There are a few services in taxize like this we can choose from: One is the Taxonomic Name Resolution Service from iPlant (see function `tnrs`).
+
+```{r cleanup, echo=TRUE}
+# The tnrs function accepts a vector of 1 or more
+mylist_tnrs <- tnrs(query=splist, getpost="POST", source = "iPlant_TNRS")
+
+# Remove some fields
+mylist_tnrs <- mylist_tnrs[,!names(mylist_tnrs) %in%
+               c("matchedName","annotations","uri")]
+
+
+```
+
+Note the scores. They suggest that there were no perfect matches, but they were all very close, ranging from 0.77 to 0.99 (1 is the highest). 
+Let's assume the names in the "acceptedName" column are correct (and they should be).
+
+So here's our updated species list:
+
+```{r taxize, echo=TRUE}
+# Using taxize ------------------------------------------------------------
+require(taxize)
+mylist_final <- as.character(mylist_tnrs$acceptedname)
+
+mynames<-frubase %>%     # mynames is a column vector with the taxa names.
+                         #    filter(fam== "ANACARDIACEAE") %>% 
+            select(species)    # The species taxon list
+tocheck<- mynames[1:50,]
+mylist<- get_ids(names=tocheck, db = c('ncbi','itis','col','tropicos'))
+
+
+```
+
+
+```{r}
+sources <- gnr_datasources()
+eol <- sources$id[sources$title == 'EOL']
+out <- gnr_resolve(splist, data_source_ids=eol, stripauthority=TRUE)
+unique(out$results)
+```
+
+### Datasets --------------------------------------------------------------
+nfrubase<-frubase[,17:32] # Numeric data only
+
+### Correlation matrices
+frubcor <- cor(log(frubase[,17:32]+1),use="pairwise") # Full correlation matrix
+frubmorphcor<- cor(log(nfrubase[,1:8]+1),use="pairwise") # Morph correlation matrix
+frubnutrcor<- cor(log(nfrubase[,9:16]+1),use="pairwise") # Nutrient correlation matrix
+
+### Plots of correlation matrices
+library(Hmisc)
+round(frubcor <- cor(log(nfrubase+1),use="pairwise"), 3)  # NOTE: pairwise
+round(frubmorphcor <- cor(log(nfrubase[,1:8]+1),use="pairwise"), 3)  # NOTE: pairwise
+round(frubnutrcor <- cor(log(nfrubase[,9:16]+1),use="pairwise"), 3)  # NOTE: pairwise
+### the heat maps of the correlation matrix
+heatmap(frubcor,symm = TRUE,margin=c(6,6),col=gray((32:0)/32))# with reorder()
+heatmap(frubmorphcor,symm = TRUE,margin=c(6,6),col=gray((32:0)/32))# with reorder()
+heatmap(frubnutrcor,symm = TRUE,margin=c(6,6),col=gray((32:0)/32))# with reorder()
+
+# Integration --- MORPHOLOGICAL MATRIX
+	feigen_morph<-eigen(frubmorphcor)
+	feigen_morph$values
+fintegr.morph<-var(feigen_morph$values)
+fintegr.morph
+# Relative integration
+fmm1<-(ncol(frubmorphcor)-1)/length(nfrubase[,1]) # Maximum expected variance
+fintegr.morph/ncol(frubmorphcor)
+ 
+# Integration --- NUTRIENT MATRIX
+	feigen_nutr<-eigen(frubnutrcor)
+	feigen_nutr$values
+fintegr.nutr<-var(feigen_nutr$values)
+fintegr.nutr
+# Relative integration
+fmm2<-(ncol(frubnutrcor)-1)/length(nfrubase[,9]) # Maximum expected variance
+fintegr.nutr/ncol(frubnutrcor)
+
+###########################################################################
+### Phylogenetic analyses
+names(frubase)
+names(nfrubase)
+hist(log(nfrubase[,1]+1))
+correl.frub<-correlogram.formula(log(frubase[,19]+1)~cl/scl/ord/fam/gen,use="pairwise.complete.obs")
+correl.frub<-correlogram.formula(log(frubase[,17]+1)~cl/scl/ord/fam/gen)
+
+
+
