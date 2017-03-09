@@ -1,0 +1,50 @@
+Hovestadt data set (status ca. 1998)
+Explanations
+Column 
+1	species name (following Hutchingson & Dalziel 1954-1972, which is not necessarily the most advanced naming)
+2+3	family and an abreviation used for the species name
+
+4-7	basic plant traits
+4	principal growth form (list contains only woody plant species)
+5	principal habitat of occurence (gal. = gallery forests along rivers, for. = (dry) forests not associated with rivers usually forest islands)
+6	indicates whether species sheds leafs during the dry season (ca. October-March)
+7	principal mode of seed dispersal. In practice, there is a considerable overlap in the use of fruits by birds and mammals.
+
+8-11	fruiting season and production
+8	season of fruiting
+9	approximate month when fruitng begins
+10	duration of fruting season (across species, individual trees usually much shorter)
+
+12-22	fruit traits
+12	type (mostly separating between fleshy fruits (usually consumed by animals) and dry fruits
+13	color of ripe fruit
+14	principal form of ripe fruit
+15	structure of fruit surface
+16	distinction between thin or thick (hard) fruit skin/shell
+17	states whether seeds can be easily separated from fruit flesh (lose) or not; only relevnt for animal dispersed species
+18	average weight of fruits in [g]
+19+20	dimension of fruits in mm - shortest and longest dimension were taken
+21	average number of seeds/fruit - numbers beyond 50 are only rough estimates. Verbal statements are based on casual inspection only
+22	number of fruits from which measurements were taken (not more than 2 from an individul tree)
+
+23-30	seed traits
+23	classification of seed type (assumed to be constant within genus). Information taken from Hladik & Miquel (1990)
+24	(for wind dispersed species only) type of dispersal supporting structure
+25	form
+26	structure of seed surface
+27-29	weight [mg] and physical dimensions [mm] of seeds
+30	number of seeds measured. Letters refer to data taken from literature: L: Lieberman et al. 1987, M: Maydell 1986, R: Refisch 1995 (a master thesis prepared in our institute)
+
+31-34	basic data on seed dispersal by four different important frugivorouse species in the Comoé NP
+	Pycnonotus barbatus (Common Garden Bulbul) is one of the most abundant bird species in (West) Africa and numerically the most important
+	fruit consuming species (38.5% of 17600 sightings of fruit eating species) in the Comoé NP (the species is rather omnivour). Species is slightly smaller than a thrush (<40g)
+	
+	Bycanistes spec. includes 3 species of larger hornbills (500-1300 g): B. fistulator, B. cylindricus and B. subcylindricus. These hornbills are all
+	strongly frugivore and apparently have very large home ranges they search in small troops (<20)
+
+	Papio cynocephalus (baboon). Species in general omnivore but regulary includes fruit and seeds in its diet.
+
+	Loxodonath africana (elephant) is probably the only legitimate seeds disperser for some of the plant species with very large seeds. Species is
+	now presumably extinct in the study area.
+
+	
