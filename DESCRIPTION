@@ -1,0 +1,17 @@
+Package: FRUBASE
+Title: FRUBASE database, a huge dataset of fleshy fruit traits compiled from bibliographic references and my own work. Data are provided for more than 1000 plant species from all around the world.
+Version: 4.0
+Date: 2007-12-12
+Authors@R: "Pedro Jordano <jordano@ebd.csic.es> [aut, cre]"
+Description: The FRUBASE package accompanies: Jordano, P. 1995. Angiosperm fleshy fruits and seed dispersers: a comparative analysis of adaptation and constraints in plant-animal interactions. American Naturalist 145: 163-191. It contains a copy of the main data file used for this paper, as well as other accompanying files (see below).
+Depends:
+    R (>= 3.1.1)
+License: CC0
+LazyData: true
+URL: https://github.com/pedroj/FRUBASE
+BugReports: https://github.com/pedroj/FRUBASE/issues
+Imports:
+    devtools,
+    dplyr,
+    ggplot2
+RoxygenNote: 6.0.1

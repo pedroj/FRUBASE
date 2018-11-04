@@ -3,21 +3,23 @@ title: "FRUBASE"
 output: html_notebook
 ---
 
-July 2007. Freiburg. Nov 2007, Sevilla.
-Revision for v. 5 started in Sevilla, 17 Jan 2015.
+July 2007. Freiburg. Nov 2007, Sevilla. Nov 2018, Sevilla.
+Revision for v. 5 started in Sevilla, 17 Jan 2017.
 
 ### Data input, etc.
 
 Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
 
 ```{r dataset}
-# Get the data from my GitHub repository.
+# Get the data from the GitHub repository.
 require(downloader)
-link = "https://raw.githubusercontent.com/pedroj/frubase/master/frubase.txt"
+link = "https://raw.githubusercontent.com/pedroj/frubase/master/data/frubase.txt"
 file = "frubase.txt"
 if(!file.exists(file)) download(link, file, mode = "wb")
 frubase <- read.table(file, sep = "\t", dec = ".", 
                       header = TRUE, na.strings="NA")
+
+save(frubase, file="../data/frubase.RData")
 
 ```
 
@@ -25,7 +27,7 @@ Prepare dataset.
 
 ```{r data_edit, echo=TRUE}
 # Add column with species names to use in taxa checks.
-species<- paste(frubase$gen,frubase$sp,sep=" ")
+species<- paste(frubase$gen, frubase$sp,sep=" ")
 frubase<- data.frame(frubase[,1:6], species, frubase[,7:32])
 # str(frubase)
 
