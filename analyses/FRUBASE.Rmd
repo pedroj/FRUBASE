@@ -52,6 +52,7 @@ summarise(by_fam.diam,
                 count = n(),
                 diam.avg = mean(diam, na.rm = TRUE),
                 diam.se = mean(diam, na.rm = TRUE))
+
 ```
 
 ### Taxa names check

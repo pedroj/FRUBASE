@@ -6,12 +6,12 @@
 #' See \url{http://r-pkgs.had.co.nz/data.html} for further explanations.
 #'
 #' @docType data
-#' @name exampledataset
+#' @name FRUBASE
 #' @format A numeric vector.
-#' @source This example modified from C. Boettiger's template package \url{https://github.com/cboettig/template}.
+#' @source Dataset repository \url{https://github.com/pedroj/FRUBASE}.
 #' @examples
 #' \dontrun{
-#' data(exampledataset)
-#' str(exampledataset)
+#' data(FRUBASE)
+#' str(frubase)
 #' }
 NULL
