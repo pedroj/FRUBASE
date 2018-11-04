@@ -1,13 +1,14 @@
-#' How to document datasets.
+#' FRUBASE.
 #'
-#' This is an example showing how to document datasets included in the package (in \code{data} folder):
-#' you must specify docType and name; do not forget NULL in the end.
-#' Can include other fields, like citation.
-#' See \url{http://r-pkgs.had.co.nz/data.html} for further explanations.
+#' The FRUBASE package accompanies: Jordano, P. 1995. Angiosperm fleshy fruits and seed disperser:
+#' a comparative analysis of adaptation and constraints in plant-animal interactions. American
+#' Naturalist 145: 163-191. It contains a copy of the main data file used for this paper, as 
+#' well as other accompanying files (see below).
+#' #' See \url{http://pedroj.github.io/FRUBASE/} for further explanations.
 #'
 #' @docType data
 #' @name FRUBASE
-#' @format A numeric vector.
+#' @format A dataframe.
 #' @source Dataset repository \url{https://github.com/pedroj/FRUBASE}.
 #' @examples
 #' \dontrun{
