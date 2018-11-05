@@ -10,7 +10,7 @@ if(!file.exists(file)) download(link, file, mode = "wb")
 frubase <- read.table(file, sep = "\t", dec = ".", 
                       header = TRUE, na.strings="NA")
 
-# Add column with species names to use in taxa chacks.
+# Add column with species names to use in taxa checks.
 species<- paste(frubase$gen,frubase$sp,sep=" ")
 frubase<- data.frame(frubase[,1:6], species, frubase[,7:32])
 str(frubase)
@@ -51,20 +51,22 @@ str(frubase)
 # $ fib    : num  0.14 0.08 NA 0.08 0.06 NA 0.23 0.18 NA NA ...
 
 # Filtering ---------------------------------------------------------------
-require(magrittr)
+# require(magrittr)
 require(dplyr)
 
 frubase_df<-tbl_df(frubase)
-frubase %>%
-        extract(, 7:11) %>%
-        head
+dplyr::slice(frubase, 7:11)
 frubase %>% filter(gen== "Vaccinium") %>% select(species, diam) 
 
 # Using taxize ------------------------------------------------------------
 require(taxize)
 mynames<-frubase %>%     # mynames is a column vector with the taxa names.
-        #    filter(fam== "ANACARDIACEAE") %>% 
+                         #    filter(fam== "ANACARDIACEAE") %>% 
             select(species)    # The species taxon list
 tocheck<- mynames[1:50,]
-mylist<- get_ids(names=tocheck, db = c('ncbi'))
+mylist<- get_ids(names= tocheck, db = c('ncbi'))
+
+#--------------------------------------------------------------------------
+sessionInfo()
+
 
