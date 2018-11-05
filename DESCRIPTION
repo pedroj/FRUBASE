@@ -13,5 +13,6 @@ BugReports: https://github.com/pedroj/FRUBASE/issues
 Imports:
     devtools,
     dplyr,
+    MASS,
     ggplot2
 RoxygenNote: 6.1.0
