@@ -1,4 +1,4 @@
-#' FRUBASE.
+#' frubase
 #'
 #' The FRUBASE package accompanies: Jordano, P. 1995. Angiosperm fleshy fruits and seed dispersers:
 #' a comparative analysis of adaptation and constraints in plant-animal interactions. American
