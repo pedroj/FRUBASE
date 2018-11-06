@@ -12,7 +12,6 @@ URL: https://github.com/pedroj/FRUBASE
 BugReports: https://github.com/pedroj/FRUBASE/issues
 Imports:
     devtools,
-    dplyr,
-    MASS,
-    ggplot2
+    dplyr
 RoxygenNote: 6.1.0
+LazyData: true
