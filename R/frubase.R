@@ -10,13 +10,13 @@ if(!file.exists(file)) download(link, file, mode = "wb")
 frubase <- read.table(file, sep = "\t", dec = ".", 
                       header = TRUE, na.strings="NA")
 
-# Saving
-save(frubase, file="./data/frubase.RData")
-
 # Add column with species names to use in taxa checks.
 species<- paste(frubase$gen,frubase$sp,sep=" ")
 frubase<- data.frame(frubase[,1:6], species, frubase[,7:32])
 str(frubase)
+
+# Saving
+save(frubase, file="./data/frubase.RData")
 
 # 'data.frame':    910 obs. of  33 variables:
 # $ cl     : Factor w/ 2 levels "Liliopsida","Magnoliopsida": 2 2 2 2  2 2 ...
@@ -54,7 +54,6 @@ str(frubase)
 # $ fib    : num  0.14 0.08 NA 0.08 0.06 NA 0.23 0.18 NA NA ...
 
 # Filtering ---------------------------------------------------------------
-# require(magrittr)
 require(dplyr)
 
 frubase_df<-tbl_df(frubase)
