@@ -10,18 +10,4 @@
 #' @name frubase
 #' @format A dataframe.
 #' @source Dataset repository \url{https://github.com/pedroj/FRUBASE}.
-#' @examples
-#' \dontrun{
-#' data(frubase)
-#' str(frubase)
-#' #
-#' save(frubase, file= "frubase.RData")
-#' 
-#' # Filtering ---------------------------------------------------------------
-#' require(dplyr)
-#' 
-#' frubase_df<- tbl_df(frubase)
-#' dplyr::slice(frubase, 7:11)
-#' frubase %>% filter(gen== "Vaccinium") %>% select(species, diam) 
-#' }
 NULL
