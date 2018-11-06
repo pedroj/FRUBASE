@@ -1,4 +1,4 @@
-“#' FRUBASE: A package including the FRUBASE dataset.
+#' FRUBASE: A package including the FRUBASE dataset.
 #'
 #' A dataset of fleshy fruit traits compiled from bibliographic references and 
 #' my own work. Data are provided for more than 1000 plant species from all 
