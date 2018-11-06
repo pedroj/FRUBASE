@@ -7,12 +7,12 @@
 #' #' See \url{http://pedroj.github.io/FRUBASE/} for further explanations.
 #'
 #' @docType data
-#' @name FRUBASE
+#' @name frubase
 #' @format A dataframe.
 #' @source Dataset repository \url{https://github.com/pedroj/FRUBASE}.
 #' @examples
 #' \dontrun{
-#' data(FRUBASE)
+#' data(frubase)
 #' str(frubase)
 #' }
 NULL

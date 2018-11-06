@@ -10,6 +10,9 @@ if(!file.exists(file)) download(link, file, mode = "wb")
 frubase <- read.table(file, sep = "\t", dec = ".", 
                       header = TRUE, na.strings="NA")
 
+# Saving
+save(frubase, file="../data/frubase.RData")
+
 # Add column with species names to use in taxa checks.
 species<- paste(frubase$gen,frubase$sp,sep=" ")
 frubase<- data.frame(frubase[,1:6], species, frubase[,7:32])
