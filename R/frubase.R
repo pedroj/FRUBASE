@@ -1,4 +1,4 @@
-#' The FRUBASE database
+#' The FRUBASE database. 
 #'
 #' This is the page for the FRUBASE database, a huge dataset of fleshy fruit 
 #' traits compiled from bibliographic references and my own work. Data are 
@@ -17,18 +17,13 @@
 #'
 #' Please, contact me if you have suggestions, find errors, inconsistencies, or 
 #' any other bug in the file. As well, please let me know about your uses of 
-#' this data and send manuscripts and reprints when available. I´ll be happy to 
-#' help you in any case, as far as I can.
-#'
-#' I am periodically updating this data base since I started writing my PhD 
-#' thesis more than 30 years ago. Thus, I´d like to receive suggestions for new 
-#' data sources and provide updated versions to those interested.
+#' this data and send manuscripts and reprints when available. 
 #'
 #' @docType data
 #' 
 #' @usage data(frubase)
 #'
-#' @format A dataset (dataframe).
+#' @format A dataset (dataframe)
 #'
 #' @keywords datasets
 #'

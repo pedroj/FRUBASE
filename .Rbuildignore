@@ -3,6 +3,7 @@
 ^data-raw$
 ^analyses$
 ^manuscript$
+^bckp$
 ^\.travis\.yml$
 README.Rmd
 
