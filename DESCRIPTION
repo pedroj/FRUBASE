@@ -13,4 +13,3 @@ Imports:
     devtools,
     dplyr
 RoxygenNote: 6.1.0
-LazyData: true
