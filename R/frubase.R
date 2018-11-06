@@ -1,74 +1,53 @@
-###########################################################################
-### FRUBASE. July 2007. Freiburg. Nov 2007, Sevilla.
-# Revision for v. 5 started in Sevilla, 17 Jan 2015.
-###########################################################################
-# Get the data from my GitHub repository.
-require(downloader)
-link = "https://raw.githubusercontent.com/pedroj/frubase/master/data/frubase.txt"
-file = "./data/frubase.txt"
-if(!file.exists(file)) download(link, file, mode = "wb")
-frubase <- read.table(file, sep = "\t", dec = ".", 
-                      header = TRUE, na.strings="NA")
-
-# Add column with species names to use in taxa checks.
-species<- paste(frubase$gen,frubase$sp,sep=" ")
-frubase<- data.frame(frubase[,1:6], species, frubase[,7:32])
-str(frubase)
-
-# Saving
-save(frubase, file="./data/frubase.RData")
-
-# 'data.frame':    910 obs. of  33 variables:
-# $ cl     : Factor w/ 2 levels "Liliopsida","Magnoliopsida": 2 2 2 2  2 2 ...
-# $ scl    : Factor w/ 9 levels "Arecidae","Asteridae",..: 8 8 8 8 8 8 8 8 ...
-# $ ord    : Factor w/ 40 levels "Apiales","Arales",..: 34 34 34 34 34 ...
-# $ fam    : Factor w/ 94 levels "ANACARDIACEAE",..: 1 1 1 1 1 1 1 1 1 1 ...
-# $ gen    : Factor w/ 395 levels "Aceratium","Acnistus",..: 159 277 277  ...
-# $ sp     : Factor w/ 754 levels "abyssinica","abyssinicum",..: 114 381 ...
-# $ species: Factor w/ 908 levels "Aceratium megalospermum",..: 376 599  ...
-# $ ref    : int  36 0 0 68 0 40 75 0 61 37 ...
-# $ newref : int  43 17 17 21 17 41 35 17 8 22 ...
-# $ famlab : Factor w/ 94 levels "ANACARDI","ANNONACE",..: 1 1 1 1 1 1 1 ...
-# $ genlab : Factor w/ 392 levels "Aceratiu","Acnistus",..: 158 278  ...
-# $ splab  : Factor w/ 714 levels "abyssini","acapulce",..: 105 360  ...
-# $ cod    : Factor w/ 842 levels "AABY","AACU",..: 352 566 567 584 603 ...
-# $ dispcat: Factor w/ 3 levels "Birds","Mammals",..: 1 1 1 1 1 3 3 1 1 1 ...
-# $ disp   : Factor w/ 3 levels "","Mixed","Small birds": 1 1 3 3 3 2 2 ...
-# $ area   : Factor w/ 6 levels "Africa","Australasia",..: 1 3 3 3 3 1 1 ...
-# $ fruit  : Factor w/ 8 levels "","Aril","Berry1",..: 5 5 5 5 5 5 5 5 5 ...
-# $ leng   : num  22.2 5.2 5.2 NA 6.4 NA NA 5.2 6.5 NA ...
-# $ diam   : num  10.6 5.3 5.5 NA 5.8 NA NA 4.8 6.5 NA ...
-# $ frfm   : num  1.1 0.1 0.1 NA 0.18 NA NA 0.02 NA 0.03 ...
-# $ pdm    : num  NA 0.03 0.01 NA 0.04 NA NA 0.01 NA 0 ...
-# $ sdm    : num  NA 0.03 0.01 NA 0.05 NA NA 0.01 NA NA ...
-# $ seeds  : num  1 1 1 NA 1 NA 1 1 NA 1 ...
-# $ seedm  : num  NA 0.03 0.01 NA 0.05 NA NA 0.01 NA NA ...
-# $ ry     : num  NA 28.3 18.4 NA 21.7 NA NA 49.8 NA 3.6 ...
-# $ kjg    : num  13.6 30 20.8 26.4 29.3 ...
-# $ kjfr   : num  NA 0.87 0.24 NA 1.15 NA NA 0.26 NA 0.03 ...
-# $ pcw    : num  NA 46.8 60.2 43.8 51.2 74 75 8.5 NA 66.7 ...
-# $ lip    : num  0.02 0.59 0.16 0.58 0.56 0.05 0.01 0.37 NA NA ...
-# $ pro    : num  0.06 0.06 0.08 0.07 0.08 0.04 0.08 0.05 NA NA ...
-# $ nsc    : num  0.72 0.26 0.74 0.12 0.29 0.89 0.44 0.37 NA NA ...
-# $ ash    : num  0.07 0.03 0.03 NA 0.03 0.03 NA 0.02 NA NA ...
-# $ fib    : num  0.14 0.08 NA 0.08 0.06 NA 0.23 0.18 NA NA ...
-
-# Filtering ---------------------------------------------------------------
-require(dplyr)
-
-frubase_df<-tbl_df(frubase)
-dplyr::slice(frubase, 7:11)
-frubase %>% filter(gen== "Vaccinium") %>% select(species, diam) 
-
-# Using taxize ------------------------------------------------------------
-require(taxize)
-mynames<-frubase %>%     # mynames is a column vector with the taxa names.
-                         #    filter(fam== "ANACARDIACEAE") %>% 
-            select(species)    # The species taxon list
-tocheck<- mynames[1:50,]
-mylist<- get_ids(names= tocheck, db = c('ncbi'))
-
-#--------------------------------------------------------------------------
-sessionInfo()
-
-
+#' The FRUBASE database
+#'
+#' This is the page for the FRUBASE database, a huge dataset of fleshy fruit 
+#' traits compiled from bibliographic references and my own work. Data are 
+#' provided for more than 1000 plant species from all around the world.
+#' 
+#' Nomenclature and taxonomic arrangement follows Stevens, P. F. (2001 onwards).
+#' Angiosperm Phylogeny Website. Version 8, June 2007. 
+#' \url{http://www.mobot.org/MOBOT/research/APweb/}. This scheme follows: 
+#' A.P.G. [= Angiosperm Phylogeny Group] II. 2003. An update of the Angiosperm 
+#' Phylogeny Group classification for the orders and families of flowering 
+#' plants: APG II. Bot. J. Linnean Soc. 141: 399-436.
+#'
+#' Plant names and names of higher taxonomic categories have been checked with: 
+#' Mabberley, D.J. 1987. The plant-book. A portable dictionary of the higher 
+#' plants. Cambridge University Press, Cambridge, UK.
+#'
+#' Please, contact me if you have suggestions, find errors, inconsistencies, or 
+#' any other bug in the file. As well, please let me know about your uses of 
+#' this data and send manuscripts and reprints when available. I´ll be happy to 
+#' help you in any case, as far as I can.
+#'
+#' I am periodically updating this data base since I started writing my PhD 
+#' thesis more than 30 years ago. Thus, I´d like to receive suggestions for new 
+#' data sources and provide updated versions to those interested.
+#'
+#' @docType data
+#' 
+#' @usage data(frubase)
+#'
+#' @format A dataset (dataframe).
+#'
+#' @keywords datasets
+#'
+#' @references Jordano, P. 1995. Angiosperm fleshy fruits and seed dispersers: a 
+#' comparative analysis of adaptation and constraints in plant-animal interactions. 
+#' American Naturalist 145: 163-191.
+#'
+#' @source \href{https://raw.githubusercontent.com/pedroj/frubase/master/data/frubase.txt}{Data txt archive}
+#'
+#' @source Dataset repository \url{https://github.com/pedroj/FRUBASE}.
+#' @examples
+#' \dontrun{
+#' data(frubase)
+#' str(frubase)
+#' 
+#' # Filtering ---------------------------------------------------------------
+#' require(dplyr)
+#' 
+#' frubase_df<- tbl_df(frubase)
+#' dplyr::slice(frubase, 7:11)
+#' frubase %>% filter(gen== "Vaccinium") %>% select(species, diam) 
+"frubase"
