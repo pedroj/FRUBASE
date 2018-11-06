@@ -3,7 +3,7 @@ Title: FRUBASE, A Dataset Of Fleshy Fruit Traits
 Version: 4.0
 Date: 2007-12-12
 Authors@R: "Pedro Jordano <jordano@ebd.csic.es> [aut, cre]"
-Description: A dataset of Angiosperm fleshy fruit characteristics.   
+Description: A dataset including Angiosperm fleshy fruit characteristics.   
 Depends:
     R (>= 3.1.1)
 License: CC0
