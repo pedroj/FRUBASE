@@ -1,6 +1,6 @@
 #' FRUBASE.
 #'
-#' The FRUBASE package accompanies: Jordano, P. 1995. Angiosperm fleshy fruits and seed disperser:
+#' The FRUBASE package accompanies: Jordano, P. 1995. Angiosperm fleshy fruits and seed dispersers:
 #' a comparative analysis of adaptation and constraints in plant-animal interactions. American
 #' Naturalist 145: 163-191. It contains a copy of the main data file used for this paper, as 
 #' well as other accompanying files (see below).
