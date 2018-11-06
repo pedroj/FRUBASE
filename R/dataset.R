@@ -8,7 +8,7 @@
 #'
 #' @docType data
 #' @name frubase
-#' @format A dataframe.
+#' @format A numeric vector.
 #' @source Dataset repository \url{https://github.com/pedroj/FRUBASE}.
 #' @examples
 #' \dontrun{

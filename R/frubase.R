@@ -5,13 +5,13 @@
 # Get the data from my GitHub repository.
 require(downloader)
 link = "https://raw.githubusercontent.com/pedroj/frubase/master/data/frubase.txt"
-file = "frubase.txt"
+file = "./data/frubase.txt"
 if(!file.exists(file)) download(link, file, mode = "wb")
 frubase <- read.table(file, sep = "\t", dec = ".", 
                       header = TRUE, na.strings="NA")
 
 # Saving
-save(frubase, file="../data/frubase.RData")
+save(frubase, file="./data/frubase.RData")
 
 # Add column with species names to use in taxa checks.
 species<- paste(frubase$gen,frubase$sp,sep=" ")
