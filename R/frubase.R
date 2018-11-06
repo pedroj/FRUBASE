@@ -39,15 +39,4 @@
 #' @source \href{https://raw.githubusercontent.com/pedroj/frubase/master/data/frubase.txt}{Data txt archive}
 #'
 #' @source Dataset repository \url{https://github.com/pedroj/FRUBASE}.
-#' @examples
-#' \dontrun{
-#' data(frubase)
-#' str(frubase)
-#' 
-#' # Filtering ---------------------------------------------------------------
-#' require(dplyr)
-#' 
-#' frubase_df<- tbl_df(frubase)
-#' dplyr::slice(frubase, 7:11)
-#' frubase %>% filter(gen== "Vaccinium") %>% select(species, diam) 
 "frubase"
