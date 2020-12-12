@@ -1,0 +1,230 @@
+{
+  "@context": "http://schema.org",
+  "type": "Dataset",
+  "name": "FRUBASE",
+  "creator": [
+    {
+      "type": "Person",
+      "id": "0000-0003-2142-9116",
+      "email": "jordano@ebd.csic.es",
+      "affiliation": "CSIC",
+      "name": "Pedro Jordano"
+    }
+  ],
+  "description": "This is the page for the FRUBASE database, a huge dataset of fleshy fruit traits compiled from bibliographic references and my own work. Data are provided for more than 1000 plant species from all around the world. It contains a copy of the main data file used for this paper, as well as other accompanying files (see below).\n\nTaxonomic arrangement follows:\n\nNomenclature and taxonomic arrangement follows Stevens, P. F. (2001 onwards). Angiosperm Phylogeny Website. Version 8, June 2007. http://www.mobot.org/MOBOT/research/APweb/. This scheme follows: A.P.G. [= Angiosperm Phylogeny Group] II. 2003. An update of the Angiosperm Phylogeny Group classification for the orders and families of flowering plants: APG II. Bot. J. Linnean Soc. 141: 399-436.\n\nPlant names and names of higher taxonomic categories have been checked with: Mabberley, D.J. 1987. The plant-book. A portable dictionary of the higher plants. Cambridge University Press, Cambridge, UK.",
+  "datePublished": "1983-04-16",
+  "keywords": ["seed dispersal", "frugivory", "physiology", "nutrientsangiosperms", "fleshy fuits"],
+  "funder": "Ministerio de Ciencia e Innovación, Spain",
+  "temporalCoverage": "NA/NA",
+  "license": "MIT",
+  "spatialCoverage": {
+    "type": "Place",
+    "name": "All the World",
+    "geo": {
+      "type": "GeoShape",
+      "box": "80 200 -85 -200"
+    }
+  },
+  "variableMeasured": [
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "cl",
+      "description": "Class"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "scl",
+      "description": "Subclass"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "ord",
+      "description": "Order"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "fam",
+      "description": "Family"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "gen",
+      "description": "Genus"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "sp",
+      "description": "Species"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "ref",
+      "description": "Reference number - This is my maintenance code for updates."
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "newref",
+      "description": "New Reference number - These are the refs numbers in the files REFS and SUMMARY."
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "famlab",
+      "description": "Family Label -  An 8-character label for family."
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "genlab",
+      "description": "Genus Label -   An 8-character label for genus."
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "splab",
+      "description": "Species Label - An 8-character label for species."
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "cod",
+      "description": "Species code -  A 5-character code for the species."
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "dispcat",
+      "description": "Disperser type category - BIRDS, MIXED, MAMMALS."
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "disp",
+      "description": "Disperser type - Finer categorization. Not yet completed. Needs revision."
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "area",
+      "description": "Geographic area - Major geographic areas of the data sources. MEurope: Mediterranean Europe (also includes Israel and Morocco. NEurope: Temperate and Northern Europe. NAmerica: North America, excl. Southern Mexico. NTAmerica: Neotropical America, incl. Southern Mexico. Africa: Africa, south of Sahara. Australasia: Australia, Malaysia, New Guinea, and whole SouthEast Asia."
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "fruit",
+      "description": "Fruit type - Type of fruit. Not completed yet."
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "mm",
+      "name": "leng",
+      "description": "Fruit length"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "mm",
+      "name": "diam",
+      "description": "Fruit diamter"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "g",
+      "name": "frfm",
+      "description": "Fruit fresh mass"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "g",
+      "name": "pdm",
+      "description": "Pulp dry mass"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "g",
+      "name": "sdm",
+      "description": "Seed dry mass"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "integer",
+      "name": "seeds",
+      "description": "Number of seeds"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "g",
+      "name": "seedm",
+      "description": "Individual seed mass"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "real",
+      "name": "ry",
+      "description": "Relative yield of pulp: dry mass of pulp/whole fruit fresh mass"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "kilojoules per gram",
+      "name": "kjg",
+      "description": "Specific energy content of pulp (kJ/g)"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "kilojoules per fruit",
+      "name": "kjfr",
+      "description": "Total energy content per fruit (kJ)"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "percentage",
+      "name": "pcw",
+      "description": "Percent water of the fruit"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "proportion",
+      "name": "lip",
+      "description": "Proportion of lipids (per g dry pulp)"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "proportion",
+      "name": "pro",
+      "description": "Proportion of protein (per g dry pulp)"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "proportion",
+      "name": "nsc",
+      "description": "Proportion of non-structural carbohydrates (per g dry pulp)"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "proportion",
+      "name": "ash",
+      "description": "Proportion of ash (per g dry pulp)"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "proportion",
+      "name": "fib",
+      "description": "Proportion of fiber (per g dry pulp)"
+    }
+  ],
+  "distribution": [
+    {
+      "type": "DataDownload",
+      "name": "The FRUBASE Dataset.",
+      "contentUrl": "http://pedroj.github.io/FRUBASE/",
+      "encodingFormat": "txt, tsv"
+    }
+  ]
+}
