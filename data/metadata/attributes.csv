@@ -1,1 +1,33 @@
 fileName,variableName,description,unitText
+frubase.tsv,cl,Class,NA
+frubase.tsv,scl,Subclass,NA
+frubase.tsv,ord,Order,NA
+frubase.tsv,fam,Family,NA
+frubase.tsv,gen,Genus,NA
+frubase.tsv,sp,Species,NA
+frubase.tsv,ref,Reference number - This is my maintenance code for updates.,NA
+frubase.tsv,newref,New Reference number - These are the refs numbers in the files REFS and SUMMARY.,NA
+frubase.tsv,famlab,Family Label -  An 8-character label for family.,NA
+frubase.tsv,genlab,Genus Label -   An 8-character label for genus.,NA
+frubase.tsv,splab,Species Label - An 8-character label for species.,NA
+frubase.tsv,cod,Species code -  A 5-character code for the species.,NA
+frubase.tsv,dispcat,"Disperser type category - BIRDS, MIXED, MAMMALS.",NA
+frubase.tsv,disp,Disperser type - Finer categorization. Not yet completed. Needs revision.,NA
+frubase.tsv,area,"Geographic area - Major geographic areas of the data sources. MEurope: Mediterranean Europe (also includes Israel and Morocco. NEurope: Temperate and Northern Europe. NAmerica: North America, excl. Southern Mexico. NTAmerica: Neotropical America, incl. Southern Mexico. Africa: Africa, south of Sahara. Australasia: Australia, Malaysia, New Guinea, and whole SouthEast Asia.",NA
+frubase.tsv,fruit,Fruit type - Type of fruit. Not completed yet. ,NA
+frubase.tsv,leng,Fruit length,mm
+frubase.tsv,diam,Fruit diamter,mm
+frubase.tsv,frfm,Fruit fresh mass,g
+frubase.tsv,pdm,Pulp dry mass,g
+frubase.tsv,sdm,Seed dry mass,g
+frubase.tsv,seeds,Number of seeds,integer
+frubase.tsv,seedm,Individual seed mass,g
+frubase.tsv,ry,Relative yield of pulp: dry mass of pulp/whole fruit fresh mass,real
+frubase.tsv,kjg,Specific energy content of pulp (kJ/g),kilojoules per gram
+frubase.tsv,kjfr,Total energy content per fruit (kJ),kilojoules per fruit
+frubase.tsv,pcw,Percent water of the fruit,percentage
+frubase.tsv,lip,Proportion of lipids (per g dry pulp),proportion
+frubase.tsv,pro,Proportion of protein (per g dry pulp),proportion
+frubase.tsv,nsc,Proportion of non-structural carbohydrates (per g dry pulp),proportion
+frubase.tsv,ash,Proportion of ash (per g dry pulp),proportion
+frubase.tsv,fib,Proportion of fiber (per g dry pulp),proportion

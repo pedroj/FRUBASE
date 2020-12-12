@@ -1,15 +1,16 @@
 # Building metadata.
 library(dataspice)
 
-create_spice()
+dataspice::create_spice()
 
-edit_creators()
-prep_access()
-edit_access()
-prep_attributes()
-edit_attributes()
-edit_biblio()
+dataspice::edit_creators()
+dataspice::prep_access()
+dataspice::edit_access()
+dataspice::prep_attributes()
+dataspice::edit_attributes()
+dataspice::edit_biblio()
 
-write_spice()
+dataspice::write_spice()
 
-build_site()
+dataspice::build_site()
+

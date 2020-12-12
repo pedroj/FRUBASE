@@ -29,7 +29,7 @@
 #'
 #' @references Jordano, P. 1995. Angiosperm fleshy fruits and seed dispersers: a comparative analysis of adaptation and constraints in plant-animal interactions. American Naturalist 145: 163-191.
 #'
-#' @source \href{https://raw.githubusercontent.com/pedroj/frubase/master/data/frubase.txt}{Data txt archive}
+#' @source \href{https://raw.githubusercontent.com/pedroj/frubase/master/data/frubase.tsv}{Data txt archive}
 #'
 #' @source Dataset repository \url{https://github.com/pedroj/FRUBASE}.
 "frubase"

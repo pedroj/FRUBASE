@@ -1,1 +1,2 @@
-﻿fileName,name,contentUrl,encodingFormat
+fileName,name,contentUrl,encodingFormat
+frubase.tsv,The FRUBASE Dataset.,http://pedroj.github.io/FRUBASE/,"txt, tsv"
