@@ -11,9 +11,9 @@
       "name": "Pedro Jordano"
     }
   ],
-  "description": "This is the page for the FRUBASE database, a huge dataset of fleshy fruit traits compiled from bibliographic references and my own work. Data are provided for more than 1000 plant species from all around the world. It contains a copy of the main data file used for this paper, as well as other accompanying files (see below).\n\nTaxonomic arrangement follows:\n\nNomenclature and taxonomic arrangement follows Stevens, P. F. (2001 onwards). Angiosperm Phylogeny Website. Version 8, June 2007. http://www.mobot.org/MOBOT/research/APweb/. This scheme follows: A.P.G. [= Angiosperm Phylogeny Group] II. 2003. An update of the Angiosperm Phylogeny Group classification for the orders and families of flowering plants: APG II. Bot. J. Linnean Soc. 141: 399-436.\n\nPlant names and names of higher taxonomic categories have been checked with: Mabberley, D.J. 1987. The plant-book. A portable dictionary of the higher plants. Cambridge University Press, Cambridge, UK.",
+  "description": "This is the page for the FRUBASE database, a huge dataset of fleshy fruit traits compiled from bibliographic references and my own work. \n\nData are provided for more than 1000 plant species from all around the world. It contains a copy of the main data file used for this paper, as well as other accompanying files (see below).\n\nTaxonomic arrangement follows:\n\nNomenclature and taxonomic arrangement follows Stevens, P. F. (2001 onwards). Angiosperm Phylogeny Website. Version 8, June 2007. http://www.mobot.org/MOBOT/research/APweb/. \n\nThis scheme follows: A.P.G. [= Angiosperm Phylogeny Group] II. 2003. An update of the Angiosperm Phylogeny Group classification for the orders and families of flowering plants: APG II. Bot. J. Linnean Soc. 141: 399-436.\n\nPlant names and names of higher taxonomic categories have been checked with: Mabberley, D.J. 1987. The plant-book. A portable dictionary of the higher plants. Cambridge University Press, Cambridge, UK.",
   "datePublished": "1983-04-16",
-  "keywords": ["seed dispersal", "frugivory", "physiology", "nutrientsangiosperms", "fleshy fuits"],
+  "keywords": ["seed dispersal", "frugivory", "physiology", "nutrients", "angiosperms", "fleshy fuits"],
   "funder": "Ministerio de Ciencia e Innovación, Spain",
   "temporalCoverage": "NA/NA",
   "license": "MIT",
