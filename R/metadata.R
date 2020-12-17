@@ -1,4 +1,7 @@
 # Building metadata.
+# install.packages("devtools")
+devtools::install_github("ropenscilabs/dataspice")
+
 library(dataspice)
 
 dataspice::create_spice()
