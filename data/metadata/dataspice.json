@@ -7,7 +7,7 @@
       "type": "Person",
       "id": "0000-0003-2142-9116",
       "email": "jordano@ebd.csic.es",
-      "affiliation": "CSIC",
+      "affiliation": "EBD-CSIC",
       "name": "Pedro Jordano"
     }
   ],
@@ -19,7 +19,7 @@
   "license": "MIT",
   "spatialCoverage": {
     "type": "Place",
-    "name": "All the World",
+    "name": "All the World.",
     "geo": {
       "type": "GeoShape",
       "box": "80 200 -85 -200"

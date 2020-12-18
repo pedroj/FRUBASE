@@ -14,7 +14,7 @@ frubase.tsv,cod,Species code -  A 5-character code for the species.,NA
 frubase.tsv,dispcat,"Disperser type category - BIRDS, MIXED, MAMMALS.",NA
 frubase.tsv,disp,Disperser type - Finer categorization. Not yet completed. Needs revision.,NA
 frubase.tsv,area,"Geographic area - Major geographic areas of the data sources. MEurope: Mediterranean Europe (also includes Israel and Morocco. NEurope: Temperate and Northern Europe. NAmerica: North America, excl. Southern Mexico. NTAmerica: Neotropical America, incl. Southern Mexico. Africa: Africa, south of Sahara. Australasia: Australia, Malaysia, New Guinea, and whole SouthEast Asia.",NA
-frubase.tsv,fruit,Fruit type - Type of fruit. Not completed yet. ,NA
+frubase.tsv,fruit,Fruit type - Type of fruit. Not completed yet.,NA
 frubase.tsv,leng,Fruit length,mm
 frubase.tsv,diam,Fruit diamter,mm
 frubase.tsv,frfm,Fruit fresh mass,g
