@@ -10,6 +10,8 @@ devtools::install_github("pedroj/FRUBASE")
 library(frubase)
 ```     
 
+The full metadata for this dataset can be found [here](http://pedroj.github.io/FRUBASE/docs/index.html).
+
 Additional description is in [the FRUBASE web page](http://pedroj.github.com/FRUBASE/). The dataset is also available in the [DRYAD Digital Repository](http://dx.doi.org/10.5061/dryad.9tb73) (please use this link when citing).
 
 ----------------
