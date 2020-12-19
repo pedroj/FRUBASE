@@ -1,0 +1,557 @@
+<html>
+  <head>
+    <title>FRUBASE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="application/ld+json">
+      {
+  "@context": "http://schema.org",
+  "type": "Dataset",
+  "name": "FRUBASE",
+  "creator": [
+    {
+      "type": "Person",
+      "id": "0000-0003-2142-9116",
+      "email": "jordano@ebd.csic.es",
+      "affiliation": "EBD-CSIC",
+      "name": "Pedro Jordano"
+    }
+  ],
+  "description": "This is the page for the FRUBASE database, a huge dataset of fleshy fruit traits compiled from bibliographic references and my own work. \n\nData are provided for more than 1000 plant species from all around the world. It contains a copy of the main data file used for this paper, as well as other accompanying files (see below).\n\nTaxonomic arrangement follows:\n\nNomenclature and taxonomic arrangement follows Stevens, P. F. (2001 onwards). Angiosperm Phylogeny Website. Version 8, June 2007. http://www.mobot.org/MOBOT/research/APweb/. \n\nThis scheme follows: A.P.G. [= Angiosperm Phylogeny Group] II. 2003. An update of the Angiosperm Phylogeny Group classification for the orders and families of flowering plants: APG II. Bot. J. Linnean Soc. 141: 399-436.\n\nPlant names and names of higher taxonomic categories have been checked with: Mabberley, D.J. 1987. The plant-book. A portable dictionary of the higher plants. Cambridge University Press, Cambridge, UK.",
+  "datePublished": "1983-04-16",
+  "keywords": ["seed dispersal", "frugivory", "physiology", "nutrients", "angiosperms", "fleshy fuits"],
+  "funder": "Ministerio de Ciencia e Innovación, Spain",
+  "temporalCoverage": "NA/NA",
+  "license": "MIT",
+  "spatialCoverage": {
+    "type": "Place",
+    "name": "All the World.",
+    "geo": {
+      "type": "GeoShape",
+      "box": "80 200 -85 -200"
+    }
+  },
+  "variableMeasured": [
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "cl",
+      "description": "Class"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "scl",
+      "description": "Subclass"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "ord",
+      "description": "Order"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "fam",
+      "description": "Family"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "gen",
+      "description": "Genus"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "sp",
+      "description": "Species"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "ref",
+      "description": "Reference number - This is my maintenance code for updates."
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "newref",
+      "description": "New Reference number - These are the refs numbers in the files REFS and SUMMARY."
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "famlab",
+      "description": "Family Label -  An 8-character label for family."
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "genlab",
+      "description": "Genus Label -   An 8-character label for genus."
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "splab",
+      "description": "Species Label - An 8-character label for species."
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "cod",
+      "description": "Species code -  A 5-character code for the species."
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "dispcat",
+      "description": "Disperser type category - BIRDS, MIXED, MAMMALS."
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "disp",
+      "description": "Disperser type - Finer categorization. Not yet completed. Needs revision."
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "area",
+      "description": "Geographic area - Major geographic areas of the data sources. MEurope: Mediterranean Europe (also includes Israel and Morocco. NEurope: Temperate and Northern Europe. NAmerica: North America, excl. Southern Mexico. NTAmerica: Neotropical America, incl. Southern Mexico. Africa: Africa, south of Sahara. Australasia: Australia, Malaysia, New Guinea, and whole SouthEast Asia."
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "fruit",
+      "description": "Fruit type - Type of fruit. Not completed yet."
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "mm",
+      "name": "leng",
+      "description": "Fruit length"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "mm",
+      "name": "diam",
+      "description": "Fruit diamter"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "g",
+      "name": "frfm",
+      "description": "Fruit fresh mass"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "g",
+      "name": "pdm",
+      "description": "Pulp dry mass"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "g",
+      "name": "sdm",
+      "description": "Seed dry mass"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "integer",
+      "name": "seeds",
+      "description": "Number of seeds"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "g",
+      "name": "seedm",
+      "description": "Individual seed mass"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "real",
+      "name": "ry",
+      "description": "Relative yield of pulp: dry mass of pulp/whole fruit fresh mass"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "kilojoules per gram",
+      "name": "kjg",
+      "description": "Specific energy content of pulp (kJ/g)"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "kilojoules per fruit",
+      "name": "kjfr",
+      "description": "Total energy content per fruit (kJ)"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "percentage",
+      "name": "pcw",
+      "description": "Percent water of the fruit"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "proportion",
+      "name": "lip",
+      "description": "Proportion of lipids (per g dry pulp)"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "proportion",
+      "name": "pro",
+      "description": "Proportion of protein (per g dry pulp)"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "proportion",
+      "name": "nsc",
+      "description": "Proportion of non-structural carbohydrates (per g dry pulp)"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "proportion",
+      "name": "ash",
+      "description": "Proportion of ash (per g dry pulp)"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "proportion",
+      "name": "fib",
+      "description": "Proportion of fiber (per g dry pulp)"
+    }
+  ],
+  "distribution": [
+    {
+      "type": "DataDownload",
+      "name": "The FRUBASE Dataset.",
+      "contentUrl": "http://pedroj.github.io/FRUBASE/",
+      "encodingFormat": "txt, tsv"
+    }
+  ]
+}
+
+    </script>
+    <style>
+      body {
+        font-size: 16px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        margin: 0 auto;
+        padding: 1rem;
+        max-width: 800px;
+      }
+
+      #map {
+        height: 20rem;
+      }
+
+      #attributes-wrapper,
+      #jsonld-wrapper {
+        height: 20rem;
+        overflow-y: scroll;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+
+      th {
+        border-bottom: 1px solid black;
+      }
+
+      th, td {
+        padding: 0.25rem;
+      }
+
+      table.listing td {
+        border: 1px solid #CCC;
+      }
+
+      table.listing tr td:first-child {
+          background-color: #EEE;
+      }
+
+      table.listing ul {
+        margin: 0 0 0 1.5rem;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>FRUBASE</h1>
+    <p><strong>Description:</strong> This is the page for the FRUBASE database, a huge dataset of fleshy fruit traits compiled from bibliographic references and my own work. 
+
+Data are provided for more than 1000 plant species from all around the world. It contains a copy of the main data file used for this paper, as well as other accompanying files (see below).
+
+Taxonomic arrangement follows:
+
+Nomenclature and taxonomic arrangement follows Stevens, P. F. (2001 onwards). Angiosperm Phylogeny Website. Version 8, June 2007. http://www.mobot.org/MOBOT/research/APweb/. 
+
+This scheme follows: A.P.G. [= Angiosperm Phylogeny Group] II. 2003. An update of the Angiosperm Phylogeny Group classification for the orders and families of flowering plants: APG II. Bot. J. Linnean Soc. 141: 399-436.
+
+Plant names and names of higher taxonomic categories have been checked with: Mabberley, D.J. 1987. The plant-book. A portable dictionary of the higher plants. Cambridge University Press, Cambridge, UK.</p>
+
+    <h2>Bibliographic</h2>
+
+    <table class="listing">
+      <tr>
+        <td>Published</td>
+        <td>1983-04-16</td>
+      </tr>
+      <tr>
+        <td>Keywords</td>
+        <td>
+          <ul>
+            <li>seed dispersal</li>
+            <li>frugivory</li>
+            <li>physiology</li>
+            <li>nutrients</li>
+            <li>angiosperms</li>
+            <li>fleshy fuits</li>
+        </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Funder</td>
+        <td>Ministerio de Ciencia e Innovación, Spain</td>
+      </tr>
+      <tr>
+        <td>License</td>
+        <td>MIT</td>
+      </tr>
+    </table>
+
+    <h2>Coverage</h2>
+
+    <h3>Temporal</h3>
+
+    <table class="listing">
+      <tr>
+        <td>Begin</td>
+        <td>NA</td>
+      </tr>
+      <tr>
+        <td>End</td>
+        <td>NA</td>
+      </tr>
+    </table>
+
+    <h3>Spatial</h3>
+    <pre><code></code></pre>
+    <div id="map"></div>
+
+    <h2>Attributes</h2>
+
+    <div id="attributes-wrapper">
+      <table id="attributes">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Unit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>cl</td>
+            <td>Class</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>scl</td>
+            <td>Subclass</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>ord</td>
+            <td>Order</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>fam</td>
+            <td>Family</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>gen</td>
+            <td>Genus</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>sp</td>
+            <td>Species</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>ref</td>
+            <td>Reference number - This is my maintenance code for updates.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>newref</td>
+            <td>New Reference number - These are the refs numbers in the files REFS and SUMMARY.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>famlab</td>
+            <td>Family Label -  An 8-character label for family.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>genlab</td>
+            <td>Genus Label -   An 8-character label for genus.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>splab</td>
+            <td>Species Label - An 8-character label for species.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>cod</td>
+            <td>Species code -  A 5-character code for the species.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>dispcat</td>
+            <td>Disperser type category - BIRDS, MIXED, MAMMALS.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>disp</td>
+            <td>Disperser type - Finer categorization. Not yet completed. Needs revision.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>area</td>
+            <td>Geographic area - Major geographic areas of the data sources. MEurope: Mediterranean Europe (also includes Israel and Morocco. NEurope: Temperate and Northern Europe. NAmerica: North America, excl. Southern Mexico. NTAmerica: Neotropical America, incl. Southern Mexico. Africa: Africa, south of Sahara. Australasia: Australia, Malaysia, New Guinea, and whole SouthEast Asia.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>fruit</td>
+            <td>Fruit type - Type of fruit. Not completed yet.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>leng</td>
+            <td>Fruit length</td>
+            <td>mm</td>
+          </tr>
+          <tr>
+            <td>diam</td>
+            <td>Fruit diamter</td>
+            <td>mm</td>
+          </tr>
+          <tr>
+            <td>frfm</td>
+            <td>Fruit fresh mass</td>
+            <td>g</td>
+          </tr>
+          <tr>
+            <td>pdm</td>
+            <td>Pulp dry mass</td>
+            <td>g</td>
+          </tr>
+          <tr>
+            <td>sdm</td>
+            <td>Seed dry mass</td>
+            <td>g</td>
+          </tr>
+          <tr>
+            <td>seeds</td>
+            <td>Number of seeds</td>
+            <td>integer</td>
+          </tr>
+          <tr>
+            <td>seedm</td>
+            <td>Individual seed mass</td>
+            <td>g</td>
+          </tr>
+          <tr>
+            <td>ry</td>
+            <td>Relative yield of pulp: dry mass of pulp/whole fruit fresh mass</td>
+            <td>real</td>
+          </tr>
+          <tr>
+            <td>kjg</td>
+            <td>Specific energy content of pulp (kJ/g)</td>
+            <td>kilojoules per gram</td>
+          </tr>
+          <tr>
+            <td>kjfr</td>
+            <td>Total energy content per fruit (kJ)</td>
+            <td>kilojoules per fruit</td>
+          </tr>
+          <tr>
+            <td>pcw</td>
+            <td>Percent water of the fruit</td>
+            <td>percentage</td>
+          </tr>
+          <tr>
+            <td>lip</td>
+            <td>Proportion of lipids (per g dry pulp)</td>
+            <td>proportion</td>
+          </tr>
+          <tr>
+            <td>pro</td>
+            <td>Proportion of protein (per g dry pulp)</td>
+            <td>proportion</td>
+          </tr>
+          <tr>
+            <td>nsc</td>
+            <td>Proportion of non-structural carbohydrates (per g dry pulp)</td>
+            <td>proportion</td>
+          </tr>
+          <tr>
+            <td>ash</td>
+            <td>Proportion of ash (per g dry pulp)</td>
+            <td>proportion</td>
+          </tr>
+          <tr>
+            <td>fib</td>
+            <td>Proportion of fiber (per g dry pulp)</td>
+            <td>proportion</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Distribution</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>File</th>
+          <th>Format</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>The FRUBASE Dataset.</td>
+          <td>txt, tsv</td>
+          <td><a href="http://pedroj.github.io/FRUBASE/">Download</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+  crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+  integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+  crossorigin=""></script>
+    <script>
+      var mymap = L.map('map').setView([-2.5, 0], 1);
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+        maxZoom: 18,
+      }).addTo(mymap);
+
+      var polygon = L.polygon([[ 80, 200], [ -85, 200], [ -85, -200], [ 80, -200]]).addTo(mymap);
+    </script>
+  </body>
+</html>
