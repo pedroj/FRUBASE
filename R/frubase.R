@@ -76,8 +76,6 @@
 #' @examples
 #' if (require("dplyr")) {
 #' frubase
-#' frubase %>% group_by(FAM) %>% summarise(fruit.diamter = mean(DIAM))
+#' frubase %>% group_by(fam) %>% summarise(fruit.diamter = mean(diam))
 #' }
-#'
 "frubase"
-
