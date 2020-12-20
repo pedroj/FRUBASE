@@ -1,4 +1,4 @@
-Package: frubasepkg
+Package: frubase
 Title: FRUBASE, A Dataset Of Fleshy Fruit Traits
 Version: 4.0
 Date: 2007-12-12
@@ -12,4 +12,5 @@ BugReports: https://github.com/pedroj/FRUBASE/issues
 Imports:
     devtools,
     dplyr
+Encoding: UTF-8
 RoxygenNote: 6.1.0
