@@ -26,10 +26,12 @@
 *.mtc
 *.mtc0
 *.RData
-*.RHistory
+.RHistory
 .DS_Store
 .Rproj.user
-*.Rproj
+.Rproj
+.Rhistory
+.RData
 *.pdf
 *.zip
 "FRUBASE Distribution.Rproj"
