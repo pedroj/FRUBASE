@@ -29,12 +29,12 @@
 #'
 #' @format A data frame with variables:
 #' \describe{
-#' \item{cl}{Class}
-#' \item{scl}{SubClass}
-#' \item{ord}{Order}
-#' \item{fam}{Family}
-#' \item{gen}{Genus}
-#' \item{sp}{Species}
+#' \item{cl}{Class.}
+#' \item{scl}{SubClass.}
+#' \item{ord}{Order.}
+#' \item{fam}{Family.}
+#' \item{gen}{Genus.}
+#' \item{sp}{Species.}
 #' \item{ref}{Reference number - This is my maintenance code for updates.}
 #' \item{newref}{New Reference number - These are the refs numbers in the files REFS and SUMMARY.}
 #' \item{famlab}{Family Label -  An 8-character label for family.}
@@ -49,22 +49,22 @@
 #' \item{fruit}{Fruit type - Type of fruit. Not completed yet. Needs revision.}
 #' \item{color}{Fruit color - Black, Blue, Red, Orange, Yellow, Green, Brown, White.}
 #' \item{compcolor}{Whether the fruit is monocolored, bicolored, or multicolored.}
-#' \item{leng}{Fruit length (mm)}
-#' \item{diam}{Fruit diameter (mm)}
-#' \item{frfm}{Fruit fresh mass (g)}
-#' \item{pdm}{Dry mass of pulp per fruit (g)}
-#' \item{sdm}{Dry mass of seed(s) per fruit (g)}
-#' \item{seeds}{Number of seeds per fruit}
-#' \item{seedm }{Seed dry mass (g)}
-#' \item{ry}{Relative yield of pulp (PDM/FRFM*100)}
-#' \item{kjg}{Specific energy content of pulp (kJ/g)}
-#' \item{kjfr}{Total energy content per fruit (kJ)}
-#' \item{pcw}{Percent water content of fruit}
-#' \item{lip}{Proportion of lipids (per g dry pulp)}
-#' \item{pro}{Proportion of protein (per g dry pulp)}
-#' \item{nsc}{Proportion of non-structural carbohydrates (per g dry pulp)}
-#' \item{ash}{Proportion of minerals (per g dry pulp)}
-#' \item{fib}{Proportion of acid-detergent fiber (per g dry pulp)}
+#' \item{leng}{Fruit length (mm).}
+#' \item{diam}{Fruit diameter (mm).}
+#' \item{frfm}{Fruit fresh mass (g).}
+#' \item{pdm}{Dry mass of pulp per fruit (g).}
+#' \item{sdm}{Dry mass of seed(s) per fruit (g).}
+#' \item{seeds}{Number of seeds per fruit.}
+#' \item{seedm }{Seed dry mass (g).}
+#' \item{ry}{Relative yield of pulp (PDM/FRFM*100).}
+#' \item{kjg}{Specific energy content of pulp (kJ/g).}
+#' \item{kjfr}{Total energy content per fruit (kJ).}
+#' \item{pcw}{Percent water content of fruit.}
+#' \item{lip}{Proportion of lipids (per g dry pulp).}
+#' \item{pro}{Proportion of protein (per g dry pulp).}
+#' \item{nsc}{Proportion of non-structural carbohydrates (per g dry pulp).}
+#' \item{ash}{Proportion of minerals (per g dry pulp).}
+#' \item{fib}{Proportion of acid-detergent fiber (per g dry pulp).}
 #' }
 #'
 #' @references Jordano, P. 1995. Angiosperm fleshy fruits and seed dispersers: a comparative analysis of adaptation and constraints in plant-animal interactions. American Naturalist 145: 163-191.
