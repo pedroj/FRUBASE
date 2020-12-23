@@ -77,6 +77,8 @@
 #' if (require("dplyr")) {
 #' data(frubase)
 #' head(frubase)
-#' frubase %>% group_by(fam) %>% summarise(fruit.diamter = mean(diam))
+#' frubase %>% 
+#'            dplyr::group_by(fam) %>% 
+#'            dplyr::summarise(fruit.diamter = mean(diam, na.rm = TRUE))
 #' }
 "frubase"
