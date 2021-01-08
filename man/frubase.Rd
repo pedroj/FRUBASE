@@ -48,7 +48,7 @@ A data frame with variables:
 }
 }
 \source{
-\href{https://raw.githubusercontent.com/pedroj/frubase/master/data/frubase.tab}{Data txt archive}
+\href{https://raw.githubusercontent.com/pedroj/FRUBASE/master/inst/extdata/frubase.tsv}{Data tsv archive}
 
 Dataset repository \url{https://github.com/pedroj/FRUBASE}.
 }
