@@ -4,12 +4,5 @@
 ^\.Rproj\.user$
 ^cran-comments\.md$
 ^CRAN-RELEASE$
-^data-raw$
-^analyses$
-^manuscript$
-^bckp$
 README.Rmd
-^slides$
-
-
 ^\.github$
