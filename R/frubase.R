@@ -73,4 +73,12 @@
 #'
 #' @source Dataset repository \url{https://github.com/pedroj/FRUBASE}.
 #'
+#' @examples
+#' if (require("dplyr")) {
+#' data(frubase)
+#' head(frubase)
+#' frubase %>% 
+#'            dplyr::group_by(fam) %>% 
+#'            dplyr::summarise(fruit.diamter = mean(diam, na.rm = TRUE))
+#' }
 "frubase"
