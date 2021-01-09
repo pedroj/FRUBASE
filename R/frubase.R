@@ -74,11 +74,23 @@
 #' @source Dataset repository \url{https://github.com/pedroj/FRUBASE}.
 #'
 #' @examples
-#' if (require("dplyr")) {
+#' # Get the data from the GitHub repository.
+#' require(downloader)
+#' link = "https://raw.githubusercontent.com/pedroj/FRUBASE/master/inst/extdata/frubase.tsv"
+#' file = "frubase.tsv"
+#' if(!file.exists(file)) download(link, file, mode = "wb")
+#' frubase <- read.table(file, sep = "\t", dec = ".", 
+#'                       header = TRUE, na.strings="NA")
+#--------------------------------------------------------
 #' data(frubase)
-#' head(frubase)
-#' frubase %>% 
-#'            dplyr::group_by(fam) %>% 
-#'            dplyr::summarise(fruit.diamter = mean(diam, na.rm = TRUE))
-#' }
+#' frubase_df %>%
+#'         dplyr::filter(gen== "Vaccinium") 
+#' dplyr::filter(frubase_df, diam > 12.0)[,7]
+#' by_fam.diam <- group_by(frubase, fam)
+#' dplyr::summarise(by_fam.diam,
+#'                 count = n(),
+#'                 diam.avg = mean(diam, na.rm = TRUE),
+#'                 diam.se = mean(diam, na.rm = TRUE))
+#' #--------------------------------------------------------
+#' 
 "frubase"
