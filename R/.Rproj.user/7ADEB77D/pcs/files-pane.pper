@@ -1,0 +1,9 @@
+{
+    "path" : "~/Documents/Datos/Datasets/frubase",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}

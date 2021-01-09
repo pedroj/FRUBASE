@@ -1,0 +1,7 @@
+"0","```r
+sources <- gnr_datasources()
+eol <- sources$id[sources$title == 'EOL'] #c('ncbi','itis','col','tropicos')
+out <- gnr_resolve(splist, data_source_ids=eol, stripauthority=TRUE)
+unique(out$results)
+
+```"

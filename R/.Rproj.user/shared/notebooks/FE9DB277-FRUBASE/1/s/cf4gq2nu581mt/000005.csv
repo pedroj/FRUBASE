@@ -1,0 +1,7 @@
+"0","```r
+by_fam.diam <- group_by(frubase_df, fam)
+summarise(by_fam.diam,
+                count = n(),
+                diam.avg = mean(diam, na.rm = TRUE),
+                diam.se = mean(diam, na.rm = TRUE))
+```"

@@ -1,0 +1,26 @@
+{
+    "id": "8726313F",
+    "path": "~/Documents/Datos/Datasets/frubase/R/frubase.R",
+    "project_path": "R/frubase.R",
+    "type": "r_source",
+    "hash": "413244458",
+    "contents": "",
+    "dirty": false,
+    "created": 1610227703023.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "89,20",
+        "scrollLine": "69"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1610227504,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1610227504,
+    "read_only": false,
+    "read_only_alternatives": []
+}

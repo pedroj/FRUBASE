@@ -1,0 +1,5 @@
+"0","# Add column with species names to use in taxa checks."
+"0","species<- paste(frubase$gen, frubase$sp,sep="" "")"
+"0","frubase<- data.frame(frubase[,1:6], species, frubase[,7:32])"
+"0","# str(frubase)"
+"0",""

@@ -1,0 +1,12 @@
+"0","```r
+# The tnrs function accepts a vector of 1 or more
+mylist_tnrs <- tnrs(query=splist, getpost=\"POST\", source = \"iPlant_TNRS\")
+
+# Remove some fields
+mylist_tnrs <- mylist_tnrs[,!names(mylist_tnrs) %in%
+               c(\"matchedName\",\"annotations\",\"uri\")]
+mylist_tnrs_df<- tbl_df(mylist_tnrs)
+
+mylist_final <- as.character(mylist_tnrs$acceptedname)
+
+```"

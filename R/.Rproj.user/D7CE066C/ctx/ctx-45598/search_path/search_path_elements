@@ -1,0 +1,16 @@
+.GlobalEnv
+devtools_shims
+package:frubase
+package:taxize
+package:bindrcpp
+package:dplyr
+package:downloader
+tools:rstudio
+package:stats
+package:graphics
+package:grDevices
+package:datasets
+package:utils
+package:methods
+Autoloads
+package:base

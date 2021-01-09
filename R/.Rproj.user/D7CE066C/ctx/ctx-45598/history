@@ -1,0 +1,291 @@
+# Get the data from my GitHub repository.
+require(downloader)
+link = "https://raw.githubusercontent.com/pedroj/frubase/master/frubase.txt"
+file = "frubase.txt"
+if(!file.exists(file)) download(link, file, mode = "wb")
+frubase <- read.table(file, sep = "\t", dec = ".",
+header = TRUE, na.strings="NA")
+# Add column with species names to use in taxa checks.
+species<- paste(frubase$gen,frubase$sp,sep=" ")
+frubase<- data.frame(frubase[,1:6], species, frubase[,7:32])
+str(frubase)
+require(dplyr)
+frubase_df<-tbl_df(frubase)
+frubase %>%
+extract(,7:11) %>%
+head
+require(dplyr)
+frubase_df<-tbl_df(frubase)
+frubase %>%
+dplyr::select(,7:11) %>%
+head
+require(dplyr)
+frubase_df<-tbl_df(frubase)
+frubase %>%
+filter(gen== "Vaccinium")
+%>% select(species, diam)
+require(dplyr)
+frubase_df<-tbl_df(frubase)
+frubase %>%
+filter(gen== "Vaccinium")
+%>% select(species, diam)
+require(dplyr)
+frubase_df<-tbl_df(frubase)
+frubase %>%
+filter(gen== "Vaccinium") %>%
+filter(species, diam)
+species
+glimpse(frubase_df)
+frubase_df %>%
+filter(gen== "Vaccinium") %>%
+filter(species, diam)
+require(dplyr)
+frubase_df<-tbl_df(frubase)
+glimpse(frubase_df)
+frubase_df %>%
+filter(gen== "Vaccinium") %>%
+filter(species, diam)
+splist<- frubase_df$species
+dim(splist)
+splist
+# Using taxize ------------------------------------------------------------
+require(taxize)
+mylist_final <- as.character(mylist_tnrs$acceptedname)
+mylist_tnrs <- tnrs(query=splist, getpost="POST", source = "iPlant_TNRS")
+str(frubase_df)
+require(dplyr)
+frubase_df<-tbl_df(frubase)
+glimpse(frubase_df)
+frubase_df %>%
+filter(gen== "Vaccinium") %>%
+filter(species, diam)
+frubase_df %>%
+filter(gen== "Vaccinium") %>%
+by_fam.diam <- group_by(frubase_df, fam)
+frubase_df %>%
+filter(gen== "Vaccinium")
+by_fam.diam <- group_by(frubase_df, fam)
+diam.avg <- summarise(by_fam.diam,
+count = n(),
+diam.avg = mean(diam, na.rm = TRUE),
+diam.se = mean(diam, na.rm = TRUE))
+diam.avg
+mylist_tnrs <- tnrs(query=splist, getpost="POST", source = "iPlant_TNRS")
+mylist_tnrs <- tnrs(query=splist[10], getpost="POST", source = "iPlant_TNRS")
+mylist_tnrs
+mylist_tnrs <- tnrs(query=splist[1:10], getpost="POST", source = "iPlant_TNRS")
+mylist_tnrs
+splist[1:10]
+mylist_tnrs <- tnrs(query=splist[1:50], getpost="POST", source = "iPlant_TNRS")
+mylist_tnrs
+str(mylist_tnrs)
+mylist_tnrs <- mylist_tnrs[,!names(mylist_tnrs) %in%
+c("matchedName","annotations","uri")]
+mylist_tnrs
+sources <- gnr_datasources()
+eol <- sources$id[sources$title == 'EOL']
+out <- gnr_resolve(splist, data_source_ids=eol, stripauthority=TRUE)
+filter(frubase_df, diam > 12.0)[,species]
+filter(frubase_df, diam > 12.0)[species]
+glimpse(frubase_df)
+filter(frubase_df, diam > 12.0)[,19]
+filter(frubase_df, diam > 12.0)[,7]
+# Get the data from my GitHub repository.
+require(downloader)
+link = "https://raw.githubusercontent.com/pedroj/frubase/master/frubase.txt"
+file = "frubase.txt"
+if(!file.exists(file)) download(link, file, mode = "wb")
+frubase <- read.table(file, sep = "\t", dec = ".",
+header = TRUE, na.strings="NA")
+# Add column with species names to use in taxa checks.
+species<- paste(frubase$gen,frubase$sp,sep=" ")
+frubase<- data.frame(frubase[,1:6], species, frubase[,7:32])
+# str(frubase)
+require(dplyr)
+frubase_df<- tbl_df(frubase)
+head(frubase_df)
+glimpse(frubase_df)
+frubase_df %>%
+filter(gen== "Vaccinium")
+filter(frubase_df, diam > 12.0)[,7]
+by_fam.diam <- group_by(frubase_df, fam)
+summarise(by_fam.diam,
+count = n(),
+diam.avg = mean(diam, na.rm = TRUE),
+diam.se = mean(diam, na.rm = TRUE))
+# The tnrs function accepts a vector of 1 or more
+mylist_tnrs <- tnrs(query=splist, getpost="POST", source = "iPlant_TNRS")
+# Remove some fields
+mylist_tnrs <- mylist_tnrs[,!names(mylist_tnrs) %in%
+c("matchedName","annotations","uri")]
+# Using taxize ------------------------------------------------------------
+require(taxize)
+mylist_final <- as.character(mylist_tnrs$acceptedname)
+mynames<-frubase %>%     # mynames is a column vector with the taxa names.
+# filter(fam== "ANACARDIACEAE") %>%
+select(species)    # The species taxon list
+tocheck<- mynames[1:50,]
+mylist<- get_ids(names=tocheck, db = c('ncbi','itis','col','tropicos'))
+sources <- gnr_datasources()
+eol <- sources$id[sources$title == 'EOL']
+out <- gnr_resolve(splist, data_source_ids=eol, stripauthority=TRUE)
+unique(out$results)
+nfrubase<-frubase[,17:32]             # Numeric data only
+#-------------------------------------------------------------------------
+### Correlation matrices
+frubcor <- cor(log(frubase[,17:32]+1),use="pairwise") # Full correlation matrix
+nfrubase<-frubase[,17:32]             # Numeric data only
+#-------------------------------------------------------------------------
+### Correlation matrices
+frubcor <- cor(log(frubase[,17:32])+1,use="pairwise") # Full correlation matrix
+str(nfrubase)
+str(frubase)
+nfrubase<-frubase[,18:32]             # Numeric data only
+str(nfrubase)
+nfrubase<-frubase[,18:32]             # Numeric data only
+#-------------------------------------------------------------------------
+### Correlation matrices
+frubcor <- cor(log(nfrubase)+1,use="pairwise") # Full correlation matrix
+frubmorphcor<- cor(log(nfrubase[,1:8])+1,use="pairwise") # Morph correlation matrix
+frubnutrcor<- cor(log(nfrubase[,9:15])+1,use="pairwise") # Nutrient correlation matrix
+#-------------------------------------------------------------------------
+### Plots of correlation matrices
+library(Hmisc)
+round(frubcor <- cor(log(nfrubase)+1,use="pairwise"), 3)  # NOTE: pairwise
+round(frubmorphcor <- cor(log(nfrubase[,1:8])+1,use="pairwise"), 3)  # NOTE: pairwise
+round(frubnutrcor <- cor(log(nfrubase[,9:15])+1,use="pairwise"), 3)  # NOTE: pairwise
+### the heat maps of the correlation matrix
+heatmap(frubcor,symm = TRUE,margin=c(6,6),col=gray((32:0)/32))# with reorder()
+heatmap(frubnutrcor,symm = TRUE,margin=c(6,6),col=gray((32:0)/32))# with reorder()
+cor(log(nfrubase)+1, use="pairwise"), 3)
+round(frubcor <- cor(log(nfrubase)+1, use="pairwise"), 3)
+round(frubmorphcor <- cor(log(nfrubase[,1:8])+1, use="pairwise"), 3)  # NOTE: pairwise
+nfrubase
+mylist_tnrs
+mylist_tnrs_df<- tbl_df(mylist_tnrs)
+mylist_tnrs_df
+mylist_final <- as.character(mylist_tnrs$acceptedname)
+mylist_final
+# Using taxize ------------------------------------------------------------
+require(taxize)
+mynames<-frubase %>%     # mynames is a column vector with the taxa names.
+select(species)    # The species taxon list
+tocheck<- mynames
+mylist<- get_ids(names=tocheck, db = c('ncbi','itis','col','tropicos'))
+# Using taxize ------------------------------------------------------------
+require(taxize)
+mynames<-frubase %>%     # mynames is a column vector with the taxa names.
+select(species)    # The species taxon list
+tocheck<- mynames
+mylist<- get_ids(names=tocheck, db = c('ncbi','itis','col','tropicos'))
+mynames
+mylist
+sources <- gnr_datasources()
+eol <- sources$id[sources$title == 'EOL']
+out <- gnr_resolve(splist, data_source_ids=eol, stripauthority=TRUE)
+unique(out$results)
+out
+str(mylist)
+clear()
+# Get the data from the GitHub repository.
+require(downloader)
+link = "https://raw.githubusercontent.com/pedroj/frubase/master/data/frubase.txt"
+file = "frubase.txt"
+if(!file.exists(file)) download(link, file, mode = "wb")
+devtools::load_all(".")
+devtools::load_all("~/Documents/Datos/Datasets/frubase")
+devtools::load_all("~/Documents/Datos/Datasets/frubase")
+devtools::load_all("~/Documents/Datos/Datasets/frubase")
+devtools::load_all("~/Documents/Datos/Datasets/frubase")
+use_entrez()
+library(taxize)
+use_entrez()
+frubase_df<-tbl_df(frubase)
+# Filtering ---------------------------------------------------------------
+# require(magrittr)
+require(dplyr)
+frubase_df<-tbl_df(frubase)
+frubase %>%
+dplyr::slice(frubase,7:11) %>%
+head
+dplyr::slice(frubase, 7:11)
+frubase %>%
+dplyr::slice(frubase, 7:11) %>%
+head
+# Filtering ---------------------------------------------------------------
+# require(magrittr)
+require(dplyr)
+frubase_df<-tbl_df(frubase)
+frubase %>%
+dplyr::slice(frubase, 7:11) %>%
+# head
+frubase %>% filter(gen== "Vaccinium") %>% select(species, diam)
+# Filtering ---------------------------------------------------------------
+# require(magrittr)
+require(dplyr)
+frubase_df<-tbl_df(frubase)
+frubase %>%
+dplyr::slice(frubase, 7:11) # %>%
+require(downloader)
+link = "https://raw.githubusercontent.com/pedroj/frubase/master/data/frubase.txt"
+file = "frubase.txt"
+if(!file.exists(file)) download(link, file, mode = "wb")
+frubase <- read.table(file, sep = "\t", dec = ".",
+header = TRUE, na.strings="NA")
+# Saving
+save(frubase, file="../data/frubase.RData")
+###########################################################################
+### FRUBASE. July 2007. Freiburg. Nov 2007, Sevilla.
+# Revision for v. 5 started in Sevilla, 17 Jan 2015.
+###########################################################################
+# Get the data from my GitHub repository.
+require(downloader)
+link = "https://raw.githubusercontent.com/pedroj/frubase/master/data/frubase.txt"
+file = "../data/frubase.txt"
+if(!file.exists(file)) download(link, file, mode = "wb")
+frubase <- read.table(file, sep = "\t", dec = ".",
+header = TRUE, na.strings="NA")
+# Saving
+save(frubase, file="../data/frubase.RData")
+devtools::load_all("~/Documents/Datos/Datasets/frubase")
+library(frubase)
+?FRUBASE
+library(frubase)
+###########################################################################
+### FRUBASE. July 2007. Freiburg. Nov 2007, Sevilla.
+# Revision for v. 5 started in Sevilla, 17 Jan 2015.
+###########################################################################
+# Get the data from my GitHub repository.
+require(downloader)
+link = "https://raw.githubusercontent.com/pedroj/frubase/master/data/frubase.txt"
+file = "./data/frubase.txt"
+if(!file.exists(file)) download(link, file, mode = "wb")
+frubase <- read.table(file, sep = "\t", dec = ".",
+header = TRUE, na.strings="NA")
+file = "../data/frubase.txt"
+if(!file.exists(file)) download(link, file, mode = "wb")
+frubase <- read.table(file, sep = "\t", dec = ".",
+header = TRUE, na.strings="NA")
+# Add column with species names to use in taxa checks.
+species<- paste(frubase$gen,frubase$sp,sep=" ")
+frubase<- data.frame(frubase[,1:6], species, frubase[,7:32])
+str(frubase)
+# Saving
+save(frubase, file="./data/frubase.RData")
+# Saving
+save(frubase, file="../data/frubase.RData")
+# Filtering ---------------------------------------------------------------
+require(dplyr)
+frubase_df<-tbl_df(frubase)
+dplyr::slice(frubase, 7:11)
+frubase %>% filter(gen== "Vaccinium") %>% select(species, diam)
+library(frubase)
+?FRUBASE
+library(frubase)
+?frubase
+library(frubase)
+?frubase
+library(frubase)
+devtools::load_all("~/Documents/Datos/Datasets/frubase")
+library(frubase)
+?frubase

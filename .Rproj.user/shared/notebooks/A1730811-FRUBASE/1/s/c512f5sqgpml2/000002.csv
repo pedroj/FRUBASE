@@ -1,0 +1,49 @@
+"0","```r
+nfrubase<-frubase[,18:32]             # Numeric data only
+
+#-------------------------------------------------------------------------
+### Correlation matrices
+frubcor <- cor(log(nfrubase)+1,use=\"pairwise\") # Full correlation matrix
+frubmorphcor<- cor(log(nfrubase[,1:8])+1,use=\"pairwise\") # Morph correlation matrix
+frubnutrcor<- cor(log(nfrubase[,9:15])+1,use=\"pairwise\") # Nutrient correlation matrix
+
+#-------------------------------------------------------------------------
+### Plots of correlation matrices
+library(Hmisc)
+round(frubcor <- cor(log(nfrubase)+1, use=\"pairwise\"), 3)  # NOTE: pairwise
+round(frubmorphcor <- cor(log(nfrubase[,1:8])+1, use=\"pairwise\"), 3)  # NOTE: pairwise
+round(frubnutrcor <- cor(log(nfrubase[,9:15])+1, use=\"pairwise\"), 3)  # NOTE: pairwise
+### the heat maps of the correlation matrix
+heatmap(frubcor,symm = TRUE,margin=c(6,6),col=gray((32:0)/32))# with reorder()
+heatmap(frubmorphcor,symm = TRUE,margin=c(6,6),col=gray((32:0)/32))# with reorder()
+heatmap(frubnutrcor,symm = TRUE,margin=c(6,6),col=gray((32:0)/32))# with reorder()
+
+#---------------------------------------------------------------------------
+# Integration --- MORPHOLOGICAL MATRIX
+	feigen_morph<-eigen(frubmorphcor)
+	feigen_morph$values
+fintegr.morph<-var(feigen_morph$values)
+fintegr.morph
+# Relative integration
+fmm1<-(ncol(frubmorphcor)-1)/length(nfrubase[,1]) # Maximum expected variance
+fintegr.morph/ncol(frubmorphcor)
+
+#---------------------------------------------------------------------------
+# Integration --- NUTRIENT MATRIX
+	feigen_nutr<-eigen(frubnutrcor)
+	feigen_nutr$values
+fintegr.nutr<-var(feigen_nutr$values)
+fintegr.nutr
+# Relative integration
+fmm2<-(ncol(frubnutrcor)-1)/length(nfrubase[,9]) # Maximum expected variance
+fintegr.nutr/ncol(frubnutrcor)
+
+#---------------------------------------------------------------------------
+### Phylogenetic analyses
+names(frubase)
+names(nfrubase)
+hist(log(nfrubase[,1]+1))
+correl.frub<-correlogram.formula(log(frubase[,19])+1~cl/scl/ord/fam/gen,use=\"pairwise.complete.obs\")
+#---------------------------------------------------------------------------
+
+```"

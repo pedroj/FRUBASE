@@ -1,0 +1,5 @@
+"0","```r
+require(dplyr)
+frubase_df<- tbl_df(frubase)
+head(frubase_df)
+```"
