@@ -12,5 +12,7 @@ BugReports: https://github.com/pedroj/FRUBASE/issues
 Imports:
     devtools,
     dplyr
+Exports:
+	frubase
 Encoding: UTF-8
 RoxygenNote: 7.1.1

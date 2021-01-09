@@ -13,13 +13,14 @@ Try executing this chunk by clicking the *Run* button within the chunk or by pla
 ```{r dataset}
 # Get the data from the GitHub repository.
 require(downloader)
+require(here)
 link = "https://raw.githubusercontent.com/pedroj/FRUBASE/master/inst/extdata/frubase.tsv"
 file = "frubase.tsv"
 if(!file.exists(file)) download(link, file, mode = "wb")
 frubase <- read.table(file, sep = "\t", dec = ".", 
                       header = TRUE, na.strings="NA")
 
-save(frubase, file="../data/frubase.RData")
+save(frubase, file= here::here("data/frubase.RData"))
 
 ```
 
@@ -38,7 +39,7 @@ frubase<- data.frame(frubase[,1:6], species, frubase[,7:32])
 
 ```{r filter, echo=TRUE}
 require(dplyr)
-frubase_df<- tbl_df(frubase)
+frubase_df<- tibble::as_tibble(frubase)
 head(frubase_df)
 glimpse(frubase_df)
 

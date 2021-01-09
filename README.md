@@ -7,6 +7,8 @@ Installation:
 ```r
 devtools::install_github("pedroj/FRUBASE")
 library(frubase)
+data(frubase)
+
 ```     
 
 The full metadata for this dataset can be found [here](http://pedroj.github.io/FRUBASE/metadata.html).
