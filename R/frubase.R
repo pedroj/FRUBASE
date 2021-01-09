@@ -75,6 +75,7 @@
 #'
 #' @examples
 #' # Get the data from the GitHub repository.
+#' require(dplyr)
 #' require(downloader)
 #' link = "https://raw.githubusercontent.com/pedroj/FRUBASE/master/inst/extdata/frubase.tsv"
 #' file = "frubase.tsv"
@@ -82,12 +83,11 @@
 #' frubase <- read.table(file, sep = "\t", dec = ".", 
 #'                       header = TRUE, na.strings="NA")
 #--------------------------------------------------------
-#' data(frubase)
-#' frubase_df %>%
+#' frubase %>%
 #'         dplyr::filter(gen== "Vaccinium") 
-#' dplyr::filter(frubase_df, diam > 12.0)[,7]
-#' by_fam.diam <- group_by(frubase, fam)
-#' dplyr::summarise(by_fam.diam,
+#'         dplyr::filter(frubase, diam > 12.0)[,7]
+#'         by_fam.diam <- group_by(frubase, fam)
+#'         dplyr::summarise(by_fam.diam,
 #'                 count = n(),
 #'                 diam.avg = mean(diam, na.rm = TRUE),
 #'                 diam.se = mean(diam, na.rm = TRUE))
