@@ -42,13 +42,13 @@
 #' \item{splab}{Species Label - An 8-character label for species.}
 #' \item{cod}{Species code -  A 5-character code for the species.}
 #' \item{dispcat}{Disperser type category - BIRDS, MIXED, MAMMALS.}
-#' \item{disp}{Disperser type - Finer categorization. Not yet completed. Needs revision.}
-#' \item{megafauna}{Whether the fruit species is associated with dispersal of seeds by megafauna.}
-#' \item{area}{Geographic area - Major geographic areas of the data sources. MEurope: Mediterranean Europe (also includes Israel and Morocco. NEurope: Temperate and Northern Europe. NAmerica: North America, excl. Southern Mexico. NTAmerica: Neotropical America, incl. Southern Mexico. Africa: Africa, south of Sahara. Australasia: Australia, Malaysia, New Guinea, and whole SouthEast Asia.}
+#' \item{disp}{Disperser type - Needs revision.}
+#' \item{megafauna}{Species is associated with dispersal by megafauna.}
+#' \item{area}{Geographic area - Major geographic areas of the data sources.}
 #' \item{habit}{Growth habit - Tree, Shrub, Liana, Herb.}
-#' \item{fruit}{Fruit type - Type of fruit. Not completed yet. Needs revision.}
-#' \item{color}{Fruit color - Black, Blue, Red, Orange, Yellow, Green, Brown, White.}
-#' \item{compcolor}{Whether the fruit is monocolored, bicolored, or multicolored.}
+#' \item{fruit}{Fruit type - Type of fruit. Not completed. Needs revision.}
+#' \item{color}{Fruit color.}
+#' \item{compcolor}{Whether the fruit is monocolored or multicolored.}
 #' \item{leng}{Fruit length (mm).}
 #' \item{diam}{Fruit diameter (mm).}
 #' \item{frfm}{Fruit fresh mass (g).}
@@ -77,9 +77,9 @@
 #' # Get the data from the GitHub repository.
 #' require(dplyr)
 #' require(downloader)
-#' link = "https://raw.githubusercontent.com/pedroj/FRUBASE/master/inst/extdata/frubase.tsv"
-#' file = "frubase.tsv"
-#' if(!file.exists(file)) download(link, file, mode = "wb")
+#' link <- "https://raw.githubusercontent.com/pedroj/FRUBASE/master/inst/extdata/frubase.tsv"
+#' file <- "frubase.tsv"
+#' if (!file.exists(file)) download(link, file, mode = "wb")
 #' frubase <- read.table(file, sep = "\t", dec = ".", 
 #'                       header = TRUE, na.strings="NA")
 #--------------------------------------------------------
