@@ -1,6 +1,9 @@
 ---
 title: "FRUBASE"
-output: html_notebook
+output:
+  html_document:
+    theme: united
+    highlight: default
 ---
 
 July 2007. Freiburg. Nov 2007, Sevilla. Nov 2018, Sevilla.
@@ -14,9 +17,9 @@ Try executing this chunk by clicking the *Run* button within the chunk or by pla
 # Get the data from the GitHub repository.
 require(downloader)
 require(here)
-link = "https://raw.githubusercontent.com/pedroj/FRUBASE/master/
-        inst/extdata/frubase.tsv"
-file = "frubase.tsv"
+link<-  
+"https://raw.githubusercontent.com/pedroj/FRUBASE/master/inst/extdata/frubase.tsv"
+file<- "frubase.tsv"
 if(!file.exists(file)) download(link, file, mode = "wb")
 frubase <- read.table(file, sep = "\t", dec = ".", 
                       header = TRUE, na.strings="NA")

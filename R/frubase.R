@@ -3,7 +3,7 @@
 #' This is the page for the FRUBASE database, a huge dataset of fleshy fruit
 #' traits compiled from bibliographic references and my own work. Data are
 #' provided for more than 1000 plant species from all around the world.
-#' 
+#'
 #' Nomenclature and taxonomic arrangement follows Stevens, P.F. (2001 onwards).
 #' Angiosperm Phylogeny Website. Version 8, June 2007.
 #' \url{http://www.mobot.org/MOBOT/research/APweb/}. This scheme follows:
@@ -20,7 +20,7 @@
 #' this data and send manuscripts and reprints when available.
 #'
 #' @docType data
-#' 
+#'
 #' @usage data(frubase)
 #'
 #' @format A dataset (dataframe)
@@ -92,5 +92,5 @@
 #'                 diam.avg = mean(diam, na.rm = TRUE),
 #'                 diam.se = mean(diam, na.rm = TRUE))
 #' #--------------------------------------------------------
-#' 
+#'
 "frubase"
