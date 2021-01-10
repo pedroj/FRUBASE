@@ -36,7 +36,7 @@
 #' \item{gen}{Genus.}
 #' \item{sp}{Species.}
 #' \item{ref}{Reference number - This is my maintenance code for updates.}
-#' \item{newref}{New Reference number - Refs numbers in the files REFS and SUMMARY.}
+#' \item{newref}{New Reference number.}
 #' \item{famlab}{Family Label -  An 8-character label for family.}
 #' \item{genlab}{Genus Label -   An 8-character label for genus.}
 #' \item{splab}{Species Label - An 8-character label for species.}

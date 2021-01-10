@@ -17,7 +17,7 @@ Try executing this chunk by clicking the *Run* button within the chunk or by pla
 # Get the data from the GitHub repository.
 require(downloader)
 require(here)
-link <- 
+link <-
 "https://raw.githubusercontent.com/pedroj/FRUBASE/master/inst/extdata/frubase.tsv"
 file <- "frubase.tsv"
 if(!file.exists(file)) download(link, file, mode = "wb")
