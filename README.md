@@ -1,5 +1,5 @@
 FRUBASE
-======= 
+=======
 
 ![R-CMD-check](https://github.com/pedroj/FRUBASE/workflows/R-CMD-check/badge.svg)
 

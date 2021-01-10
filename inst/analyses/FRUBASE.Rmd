@@ -8,13 +8,14 @@ Revision for v. 5 started in Sevilla, 17 Jan 2017.
 
 ### Data input, etc.
 
-Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*.
 
 ```{r dataset}
 # Get the data from the GitHub repository.
 require(downloader)
 require(here)
-link = "https://raw.githubusercontent.com/pedroj/FRUBASE/master/inst/extdata/frubase.tsv"
+link = "https://raw.githubusercontent.com/pedroj/FRUBASE/master/
+        inst/extdata/frubase.tsv"
 file = "frubase.tsv"
 if(!file.exists(file)) download(link, file, mode = "wb")
 frubase <- read.table(file, sep = "\t", dec = ".", 
