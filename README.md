@@ -11,7 +11,7 @@ devtools::install_github("pedroj/FRUBASE")
 library(frubase)
 data(frubase)
 
-```     
+```
 
 The full metadata for this dataset can be found [here](http://pedroj.github.io/FRUBASE/metadata.html).
 
@@ -22,4 +22,4 @@ Additional description is in [the FRUBASE web page](http://pedroj.github.com/FRU
 
 Creative Commons License  
 
-This work and all other materials under https://github.com/pedroj/ are licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/legalcode).
+This work and all other materials under [my GitHub repo](https://github.com/pedroj/) are licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/legalcode).
