@@ -36,14 +36,14 @@
 #' \item{gen}{Genus.}
 #' \item{sp}{Species.}
 #' \item{ref}{Reference number - This is my maintenance code for updates.}
-#' \item{newref}{New Reference number - These are the refs numbers in the files REFS and SUMMARY.}
+#' \item{newref}{New Reference number - Refs numbers in the files REFS and SUMMARY.}
 #' \item{famlab}{Family Label -  An 8-character label for family.}
 #' \item{genlab}{Genus Label -   An 8-character label for genus.}
 #' \item{splab}{Species Label - An 8-character label for species.}
 #' \item{cod}{Species code -  A 5-character code for the species.}
 #' \item{dispcat}{Disperser type category - BIRDS, MIXED, MAMMALS.}
 #' \item{disp}{Disperser type - Finer categorization. Not yet completed. Needs revision.}
-#' \item{megafauna}{ Whether the fruit species is associated with dispersal of seeds by megafauna.}
+#' \item{megafauna}{Whether the fruit species is associated with dispersal of seeds by megafauna.}
 #' \item{area}{Geographic area - Major geographic areas of the data sources. MEurope: Mediterranean Europe (also includes Israel and Morocco. NEurope: Temperate and Northern Europe. NAmerica: North America, excl. Southern Mexico. NTAmerica: Neotropical America, incl. Southern Mexico. Africa: Africa, south of Sahara. Australasia: Australia, Malaysia, New Guinea, and whole SouthEast Asia.}
 #' \item{habit}{Growth habit - Tree, Shrub, Liana, Herb.}
 #' \item{fruit}{Fruit type - Type of fruit. Not completed yet. Needs revision.}
