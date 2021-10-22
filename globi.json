@@ -9,6 +9,7 @@
     } ],
     "rdfs:comment" : [ "inspired by https://www.w3.org/TR/2015/REC-tabular-data-model-20151217/" ],
     "url" : "inst/extdata/frubase.tsv",
+    "doi" : "10.5061/dryad.9tb73",
     "dcterms:bibliographicCitation" : "Jordano, Pedro (2013), Data from: Angiosperm fleshy fruits and seed dispersers: a comparative analysis of adaptation and constraints in plant-animal interactions, Dryad, Dataset, https://doi.org/10.5061/dryad.9tb73",
     "delimiter" : "\t",
     "headerRowCount" : 54,
