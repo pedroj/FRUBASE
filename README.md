@@ -24,7 +24,7 @@ Creative Commons License
 
 This work and all other materials under [my GitHub repo](https://github.com/pedroj/) are licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/legalcode).
 
-## Indexing
+Indexing
 
 [![Review](https://github.com/pedroj/FRUBASE/actions/workflows/review.yml/badge.svg)](https://github.com/pedroj/FRUBASE/actions) [![Build Status](https://app.travis-ci.com/pedroj/FRUBASE.svg)](https://app.travis-ci.com/pedroj/FRUBASE) [![GloBI](https://api.globalbioticinteractions.org/interaction.svg?accordingTo=globi:pedroj/FRUBASE&refutes=true&refutes=false)](https://globalbioticinteractions.org/?accordingTo=globi:pedroj/FRUBASE)
 
