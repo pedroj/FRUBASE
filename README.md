@@ -15,7 +15,7 @@ data(frubase)
 
 The full metadata for this dataset can be found [here](http://pedroj.github.io/FRUBASE/metadata.html).
 
-Additional description is in [the FRUBASE web page](http://pedroj.github.com/FRUBASE/). The dataset is also available in the [DRYAD Digital Repository](http://dx.doi.org/10.5061/dryad.9tb73) (please use this link when citing).
+Additional description is in [the FRUBASE web page](http://pedroj.github.io/FRUBASE/). The dataset is also available in the [DRYAD Digital Repository](http://dx.doi.org/10.5061/dryad.9tb73) (please use this link when citing).
 
 ----------------
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
