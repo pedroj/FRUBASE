@@ -14,8 +14,10 @@
     "delimiter" : "\t",
     "headerRowCount" : 54,
     "null" : [ "", "NA" ],
-    "interactionTypeName": "eats",
-    "interactionTypeName": "http://purl.obolibrary.org/obo/RO_0002470",
+    "interactionTypeName": "hasVector",
+    "interactionTypeName": "http://purl.obolibrary.org/obo/RO_0002460",
+    "sourceBodyPartName": "fruit",
+    "sourceBodyPartId": "http://purl.obolibrary.org/obo/PO_0009001",
     "tableSchema" : {
       "columns" : [ {
         "name" : "sourceTaxonClassName",
@@ -50,15 +52,15 @@
         "titles" : "newref",
         "datatype" : "string"
       }, {
-        "name" : "targetTaxonFamilyName",
+        "name" : "famlab",
         "titles" : "famlab",
         "datatype" : "string"
       }, {
-        "name" : "targetTaxonGenusName",
+        "name" : "genlab",
         "titles" : "genlab",
         "datatype" : "string"
       }, {
-        "name" : "targetTaxonSpecificEpithetName",
+        "name" : "splab",
         "titles" : "splab",
         "datatype" : "string"
       }, {
@@ -66,7 +68,7 @@
         "titles" : "cod",
         "datatype" : "string"
       }, {
-        "name" : "dispcat",
+        "name" : "targetTaxonName",
         "titles" : "dispcat",
         "datatype" : "string"
       }, {
