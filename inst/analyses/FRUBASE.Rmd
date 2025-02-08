@@ -33,9 +33,16 @@ Prepare dataset.
 
 ```{r data_edit, echo=TRUE}
 # Add column with species names to use in taxa checks.
-species<- paste(frubase$gen, frubase$sp,sep=" ")
+if (!has_name(frubase, "species")) {
+  frubase= frubase |> 
+    		mutate(species= paste(frubase$gen, frubase$sp,sep=" "))
+} else {
+  # Optionally, you might want to do something if the column already exists
+  print("Column 'species' already exists.")
+}
+
 frubase<- data.frame(frubase[,1:6], species, frubase[,7:32])
-# str(frubase)
+str(frubase)
 
 ```
 
@@ -47,8 +54,8 @@ frubase_df<- tibble::as_tibble(frubase)
 head(frubase_df)
 glimpse(frubase_df)
 
-frubase_df %>%
-        dplyr::filter(gen== "Euterpe") 
+frubase_df |>
+        dplyr::filter(gen== "Prunus") 
 
 dplyr::filter(frubase_df, diam > 12.0)[,7]
 
