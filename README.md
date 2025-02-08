@@ -1,7 +1,9 @@
 FRUBASE
 =======
 
-![R-CMD-check](https://github.com/pedroj/FRUBASE/workflows/R-CMD-check/badge.svg)
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/pedroj/FRUBASE/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/pedroj/FRUBASE/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
 
 This is the page for the FRUBASE database, a huge dataset of fleshy fruit traits compiled from bibliographic references and my own work. Data are provided for more than 1000 plant species from all around the world.
 
