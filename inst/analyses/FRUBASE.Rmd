@@ -6,12 +6,13 @@ output:
     highlight: default
 ---
 
-July 2007. Freiburg. Nov 2007, Sevilla. Nov 2018, Sevilla.
-Revision for v. 5 started in Sevilla, 17 Jan 2017.
+July 2007. Freiburg. Nov 2007, Sevilla. Nov 2018, Sevilla. Revision for v. 5 started in
+Sevilla, 17 Jan 2017.
 
 ### Data input, etc.
 
-Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*.
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your
+cursor inside it and pressing *Cmd+Shift+Enter*.
 
 ```{r dataset}
 # Get the data from the GitHub repository.
@@ -38,8 +39,7 @@ frubase<- data.frame(frubase[,1:6], species, frubase[,7:32])
 
 ```
 
-
-### Filtering 
+### Filtering
 
 ```{r filter, echo=TRUE}
 require(dplyr)
@@ -56,18 +56,24 @@ by_fam.diam <- group_by(frubase, fam)
 dplyr::summarise(by_fam.diam,
                 count = n(),
                 diam.avg = mean(diam, na.rm = TRUE),
-                diam.se = mean(diam, na.rm = TRUE))
+                diam.se = sd(diam, na.rm = TRUE) / sqrt(n()))
 
 ```
 
 ### Taxa names check
-#### Cleanup list 
 
-There are many ways to resolve taxonomic names in `taxize`. Of course, the ideal name resolver will do the work behind the scenes for you so that you dont have to do things like fuzzy matching. There are a few services in taxize like this we can choose from: One is the Taxonomic Name Resolution Service from iPlant (see function `tnrs`).
+#### Cleanup list
+
+There are many ways to resolve taxonomic names in `taxize`. Of course, the ideal name
+resolver will do the work behind the scenes for you so that you don't have to do things
+like fuzzy matching. There are a few services in taxize like this we can choose from: One
+is the Taxonomic Name Resolution Service from iPlant (see function `tnrs`).
 
 ```{r cleanup, echo=TRUE, cache=TRUE}
+library(TNRS)
 # The tnrs function accepts a vector of 1 or more
-mylist_tnrs <- tnrs(query=splist, getpost="POST", source = "iPlant_TNRS")
+splist<- frubase$species
+tol_resolve(splist)
 
 # Remove some fields
 mylist_tnrs <- mylist_tnrs[,!names(mylist_tnrs) %in%
@@ -78,20 +84,23 @@ mylist_final <- as.character(mylist_tnrs$acceptedname)
 
 ```
 
-Note the scores. They suggest that there were no perfect matches, but they were all very close, ranging from 0.77 to 0.99 (1 is the highest). 
-Let's assume the names in the "acceptedName" column are correct (and they should be).
+Note the scores. They suggest that there were no perfect matches, but they were all very
+close, ranging from 0.77 to 0.99 (1 is the highest). Let's assume the names in the
+"acceptedName" column are correct (and they should be).
 
 Here is code to check a specific database:
 
 ```{r select_source}
-sources <- gnr_datasources()
-eol <- sources$id[sources$title == 'EOL'] #c('ncbi','itis','col','tropicos')
+sources <- gna_data_sources()
+sources$title
+eol <- sources$id[sources$title == 'Plant'] #c('ncbi','itis','col','tropicos')
 out <- gnr_resolve(splist, data_source_ids=eol, stripauthority=TRUE)
 unique(out$results)
 
 ```
 
-### Datasets and analyses 
+### Datasets and analyses
+
 ```{r analyses, echo=TRUE}
 nfrubase<-frubase[,18:32]             # Numeric data only
 
@@ -141,9 +150,3 @@ correl.frub<-correlogram.formula(log(frubase[,19])+1~cl/scl/ord/fam/gen,use="pai
 #---------------------------------------------------------------------------
 
 ```
-
-
-
-
-
-
