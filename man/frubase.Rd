@@ -78,11 +78,9 @@ this data and send manuscripts and reprints when available.
 }
 \examples{
 # Get the data from the GitHub repository.
-require(dplyr)
-require(downloader)
 link <- "https://raw.githubusercontent.com/pedroj/FRUBASE/master/inst/extdata/frubase.tsv"
 file <- "frubase.tsv"
-if (!file.exists(file)) download(link, file, mode = "wb")
+if (!file.exists(file)) downloader::download(link, file, mode = "wb")
 frubase <- read.table(file, sep = "\t", dec = ".", 
                       header = TRUE, na.strings="NA")
 frubase \%>\%
