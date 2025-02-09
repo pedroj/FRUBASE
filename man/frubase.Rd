@@ -83,14 +83,10 @@ file <- "frubase.tsv"
 if (!file.exists(file)) downloader::download(link, file, mode = "wb")
 frubase <- read.table(file, sep = "\t", dec = ".", 
                       header = TRUE, na.strings="NA")
-frubase \%>\%
-        dplyr::filter(gen== "Vaccinium") 
-        dplyr::filter(frubase, diam > 12.0)[,7]
-        by_fam.diam <- group_by(frubase, fam)
-        dplyr::summarise(by_fam.diam,
-                count = n(),
-                diam.avg = mean(diam, na.rm = TRUE),
-                diam.se = mean(diam, na.rm = TRUE))
+head(frubase)
+#--------------------------------------------------------
+frubase |>
+        dplyr::filter(gen== "Prunus") 
 #--------------------------------------------------------
 
 }

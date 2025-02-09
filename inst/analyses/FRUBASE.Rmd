@@ -41,7 +41,6 @@ if (!has_name(frubase, "species")) {
   print("Column 'species' already exists.")
 }
 
-frubase<- data.frame(frubase[,1:6], species, frubase[,7:32])
 str(frubase)
 
 ```
@@ -50,21 +49,16 @@ str(frubase)
 
 ```{r filter, echo=TRUE}
 require(dplyr)
-frubase_df<- tibble::as_tibble(frubase)
-head(frubase_df)
-glimpse(frubase_df)
+glimpse(frubase)
 
-frubase_df |>
+frubase |>
         dplyr::filter(gen== "Prunus") 
 
-dplyr::filter(frubase_df, diam > 12.0)[,7]
-
-by_fam.diam <- group_by(frubase, fam)
-dplyr::summarise(by_fam.diam,
-                count = n(),
+by_fam.diam <- frubase |> dplyr::group_by(fam) |>
+dplyr::summarise(count = n(),
                 diam.avg = mean(diam, na.rm = TRUE),
                 diam.se = sd(diam, na.rm = TRUE) / sqrt(n()))
-
+kable(by_fam.diam)
 ```
 
 ### Taxa names check

@@ -10,8 +10,8 @@ License: CC0
 URL: https://github.com/pedroj/FRUBASE
 BugReports: https://github.com/pedroj/FRUBASE/issues
 Imports:
-    devtools,
     downloader,
+    knitr,
     dplyr
 Exports:
 	frubase
