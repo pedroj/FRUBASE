@@ -1,9 +1,9 @@
 FRUBASE
 =======
 
-<!-- badges: start -->
-[![R-CMD-check](https://github.com/pedroj/FRUBASE/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/pedroj/FRUBASE/actions/workflows/R-CMD-check.yaml)
-<!-- badges: end -->
+[![R-CMD-check](https://github.com/pedroj/FRUBASE/actions/workflows/check-release.yaml/badge.svg)](https://github.com/pedroj/FRUBASE/actions/workflows/check-release.yaml)
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC_BY--NC--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+![R](https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white)
 
 This is the page for the FRUBASE database, a huge dataset of fleshy fruit traits compiled from bibliographic references and my own work. Data are provided for more than 1000 plant species from all around the world.
 
