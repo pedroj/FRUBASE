@@ -1,0 +1,151 @@
+{
+  "@context" : [ "http://www.w3.org/ns/csvw", {
+    "@language" : "en"
+  } ],
+  "rdfs:comment" : [ "inspired by https://www.w3.org/TR/2015/REC-tabular-data-model-20151217/" ],
+  "tables" : [ {
+    "@context" : [ "http://www.w3.org/ns/csvw", {
+      "@language" : "en"
+    } ],
+    "rdfs:comment" : [ "inspired by https://www.w3.org/TR/2015/REC-tabular-data-model-20151217/" ],
+    "url" : "inst/extdata/frubase.tsv",
+    "doi" : "10.5061/dryad.9tb73",
+    "dcterms:bibliographicCitation" : "Jordano, Pedro (2013), Data from: Angiosperm fleshy fruits and seed dispersers: a comparative analysis of adaptation and constraints in plant-animal interactions, Dryad, Dataset, https://doi.org/10.5061/dryad.9tb73",
+    "delimiter" : "\t",
+    "headerRowCount" : 54,
+    "null" : [ "", "NA" ],
+    "interactionTypeName": "eats",
+    "interactionTypeName": "http://purl.obolibrary.org/obo/RO_0002470",
+    "tableSchema" : {
+      "columns" : [ {
+        "name" : "sourceTaxonClassName",
+        "titles" : "cl",
+        "datatype" : "string"
+      }, {
+        "name" : "sourceTaxonSubclassName",
+        "titles" : "scl",
+        "datatype" : "string"
+      }, {
+        "name" : "sourceTaxonOrderName",
+        "titles" : "ord",
+        "datatype" : "string"
+      }, {
+        "name" : "sourceTaxonFamilyName",
+        "titles" : "fam",
+        "datatype" : "string"
+      }, {
+        "name" : "sourceTaxonGenusName",
+        "titles" : "gen",
+        "datatype" : "string"
+      }, {
+        "name" : "sourceTaxonSpecificEpithetName",
+        "titles" : "sp",
+        "datatype" : "string"
+      }, {
+        "name" : "referenceCitation",
+        "titles" : "ref",
+        "datatype" : "string"
+      }, {
+        "name" : "newref",
+        "titles" : "newref",
+        "datatype" : "string"
+      }, {
+        "name" : "targetTaxonFamilyName",
+        "titles" : "famlab",
+        "datatype" : "string"
+      }, {
+        "name" : "targetTaxonGenusName",
+        "titles" : "genlab",
+        "datatype" : "string"
+      }, {
+        "name" : "targetTaxonSpecificEpithetName",
+        "titles" : "splab",
+        "datatype" : "string"
+      }, {
+        "name" : "cod",
+        "titles" : "cod",
+        "datatype" : "string"
+      }, {
+        "name" : "dispcat",
+        "titles" : "dispcat",
+        "datatype" : "string"
+      }, {
+        "name" : "disp",
+        "titles" : "disp",
+        "datatype" : "string"
+      }, {
+        "name" : "localityName",
+        "titles" : "area",
+        "datatype" : "string"
+      }, {
+        "name" : "fruit",
+        "titles" : "fruit",
+        "datatype" : "string"
+      }, {
+        "name" : "leng",
+        "titles" : "leng",
+        "datatype" : "string"
+      }, {
+        "name" : "diam",
+        "titles" : "diam",
+        "datatype" : "string"
+      }, {
+        "name" : "frfm",
+        "titles" : "frfm",
+        "datatype" : "string"
+      }, {
+        "name" : "pdm",
+        "titles" : "pdm",
+        "datatype" : "string"
+      }, {
+        "name" : "sdm",
+        "titles" : "sdm",
+        "datatype" : "string"
+      }, {
+        "name" : "seeds",
+        "titles" : "seeds",
+        "datatype" : "string"
+      }, {
+        "name" : "seedm",
+        "titles" : "seedm",
+        "datatype" : "string"
+      }, {
+        "name" : "ry",
+        "titles" : "ry",
+        "datatype" : "string"
+      }, {
+        "name" : "kjg",
+        "titles" : "kjg",
+        "datatype" : "string"
+      }, {
+        "name" : "kjfr",
+        "titles" : "kjfr",
+        "datatype" : "string"
+      }, {
+        "name" : "pcw",
+        "titles" : "pcw",
+        "datatype" : "string"
+      }, {
+        "name" : "lip",
+        "titles" : "lip",
+        "datatype" : "string"
+      }, {
+        "name" : "pro",
+        "titles" : "pro",
+        "datatype" : "string"
+      }, {
+        "name" : "nsc",
+        "titles" : "nsc",
+        "datatype" : "string"
+      }, {
+        "name" : "ash",
+        "titles" : "ash",
+        "datatype" : "string"
+      }, {
+        "name" : "fib",
+        "titles" : "fib",
+        "datatype" : "string"
+      } ]
+    }
+  } ]
+}
