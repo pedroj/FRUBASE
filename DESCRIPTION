@@ -2,7 +2,7 @@ Package: frubase
 Title: FRUBASE, A Dataset Of Fleshy Fruit Traits
 Version: 4.0
 Date: 2007-12-12
-Authors@R: "Pedro Jordano <jordano@ebd.csic.es> [aut, cre]"
+Authors@R: person("Pedro", "Jordano", email = "jordano@ebd.csic.es", role = c("aut", "cre"))
 Description: A dataset including Angiosperm fleshy fruit characteristics.   
 Depends:
     R (>= 3.5.0)
@@ -13,7 +13,5 @@ Imports:
     downloader,
     knitr,
     dplyr
-Exports:
-	frubase
 Encoding: UTF-8
 RoxygenNote: 7.3.2
