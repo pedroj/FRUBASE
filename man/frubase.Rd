@@ -23,19 +23,15 @@ A data frame with variables:
 \item{cod}{Species code -  A 5-character code for the species.}
 \item{dispcat}{Disperser type category - BIRDS, MIXED, MAMMALS.}
 \item{disp}{Disperser type - Needs revision.}
-\item{megafauna}{Species is associated with dispersal by megafauna.}
 \item{area}{Geographic area - Major geographic areas of the data sources.}
-\item{habit}{Growth habit - Tree, Shrub, Liana, Herb.}
 \item{fruit}{Fruit type - Type of fruit. Not completed. Needs revision.}
-\item{color}{Fruit color.}
-\item{compcolor}{Whether the fruit is monocolored or multicolored.}
 \item{leng}{Fruit length (mm).}
 \item{diam}{Fruit diameter (mm).}
 \item{frfm}{Fruit fresh mass (g).}
 \item{pdm}{Dry mass of pulp per fruit (g).}
 \item{sdm}{Dry mass of seed(s) per fruit (g).}
 \item{seeds}{Number of seeds per fruit.}
-\item{seedm }{Seed dry mass (g).}
+\item{seedm}{Seed dry mass (g).}
 \item{ry}{Relative yield of pulp (PDM/FRFM*100).}
 \item{kjg}{Specific energy content of pulp (kJ/g).}
 \item{kjfr}{Total energy content per fruit (kJ).}
