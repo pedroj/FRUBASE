@@ -17,7 +17,7 @@ data(frubase)
 
 ```
 
-The full metadata for this dataset can be found [here](http://pedroj.github.io/FRUBASE/metadata.html).
+The full metadata for this dataset can be found in the [FRUBASE metadata page](http://pedroj.github.io/FRUBASE/metadata.html).
 
 Additional description is in [the FRUBASE web page](http://pedroj.github.io/FRUBASE/). The dataset is also available in the [DRYAD Digital Repository](http://dx.doi.org/10.5061/dryad.9tb73) (please use this link when citing).
 
