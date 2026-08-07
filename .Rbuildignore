@@ -6,3 +6,6 @@
 ^CRAN-RELEASE$
 README.Rmd
 ^\.github$
+^globi\.json$
+^README_files$
+^\.claude$

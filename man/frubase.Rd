@@ -49,7 +49,7 @@ A data frame with variables:
 Dataset repository \url{https://github.com/pedroj/FRUBASE}.
 }
 \usage{
-data(frubase)
+frubase
 }
 \description{
 This is the page for the FRUBASE database, a huge dataset of fleshy fruit

@@ -21,8 +21,6 @@
 #'
 #' @docType data
 #'
-#' @usage data(frubase)
-#'
 #' @format A dataset (dataframe)
 #'
 #' @keywords datasets
