@@ -84,5 +84,5 @@
 #'         dplyr::filter(gen== "Prunus") 
 #' #--------------------------------------------------------
 
-#'
-"frubase"
+#' @name frubase
+NULL

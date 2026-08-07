@@ -48,9 +48,6 @@ A data frame with variables:
 
 Dataset repository \url{https://github.com/pedroj/FRUBASE}.
 }
-\usage{
-frubase
-}
 \description{
 This is the page for the FRUBASE database, a huge dataset of fleshy fruit
 traits compiled from bibliographic references and my own work. Data are
@@ -84,7 +81,6 @@ head(frubase)
 frubase |>
         dplyr::filter(gen== "Prunus") 
 #--------------------------------------------------------
-
 }
 \references{
 Jordano, P. 1995. Angiosperm fleshy fruits and seed dispersers: a comparative analysis of adaptation and constraints in plant-animal interactions. American Naturalist 145: 163-191.
