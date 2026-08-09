@@ -16,10 +16,12 @@ This is the page for the FRUBASE database, a huge dataset of fleshy fruit traits
 
 Installation:
 ```r
-devtools::install_github("pedroj/FRUBASE")
+require("pak") # Using pak as `install_github()` 
+               # was deprecated in devtools 2.5.0.
+pak::pak("pedroj/FRUBASE")
+
 library(frubase)
 data(frubase)
-
 ```
 
 The full metadata for this dataset can be found in the [FRUBASE metadata page](http://pedroj.github.io/FRUBASE/metadata.html).
