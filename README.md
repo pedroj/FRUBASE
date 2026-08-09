@@ -35,7 +35,7 @@ This work and all other materials under [my GitHub repo](https://github.com/pedr
 
 Indexing
 
-[![Review](https://github.com/pedroj/FRUBASE/actions/workflows/review.yml/badge.svg)](https://github.com/pedroj/FRUBASE/actions)[![GloBI](https://api.globalbioticinteractions.org/interaction.svg?accordingTo=globi:pedroj/FRUBASE&refutes=true&refutes=false)](https://globalbioticinteractions.org/?accordingTo=globi:pedroj/FRUBASE)
+[![Review](https://github.com/pedroj/FRUBASE/actions/workflows/review.yml/badge.svg)](https://github.com/pedroj/FRUBASE/actions)[![GloBI](https://api.globalbioticinteractions.org/interaction.svg?accordingTo=globi:pedroj/FRUBASE&refutes=true&refutes=false)](https://www.globalbioticinteractions.org/?accordingTo=globi:pedroj/FRUBASE)
 
-This dataset is configured to be indexed by Global Biotic Interactions (GloBI, [https://globalbioticinteractions.org](https://globalbioticinteractions.org)).
+This dataset is configured to be indexed by Global Biotic Interactions (GloBI, [https://www.globalbioticinteractions.org](https://www.globalbioticinteractions.org)).
 
