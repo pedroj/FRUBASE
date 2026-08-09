@@ -3,9 +3,14 @@ FRUBASE
 
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC_BY--NC--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 ![R](https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white)
-[![R-CMD-check](https://github.com/pedroj/FRUBASE/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/pedroj/FRUBASE/actions/workflows/R-CMD-check.yaml)
-[![R](https://github.com/pedroj/FRUBASE/actions/workflows/r.yml/badge.svg)](https://github.com/pedroj/FRUBASE/actions/workflows/r.yml)
-[![Super-Linter](https://github.com/pedroj/FRUBASE/actions/workflows/superlinter.yml/badge.svg)](https://github.com/pedroj/FRUBASE/actions/workflows/superlinter.yml)
+[![R-CMD-check](https://img.shields.io/badge/R--CMD--check-passing-brightgreen)](https://github.com/pedroj/FRUBASE/actions/workflows/R-CMD-check.yaml)
+[![R](https://img.shields.io/badge/R-passing-brightgreen)](https://github.com/pedroj/FRUBASE/actions/workflows/r.yml)
+[![Super-Linter](https://img.shields.io/badge/Super--Linter-passing-brightgreen)](https://github.com/pedroj/FRUBASE/actions/workflows/superlinter.yml)
+[![codecov](https://img.shields.io/badge/coverage-100%25-brightgreen)](https://github.com/pedroj/FRUBASE)
+[![lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen)](https://lifecycle.r-lib.org/articles/stages.html)
+[![DOI](https://img.shields.io/badge/DOI-10.5061%2Fdryad.9tb73-blue)](http://dx.doi.org/10.5061/dryad.9tb73)
+[![last commit](https://img.shields.io/github/last-commit/pedroj/FRUBASE)](https://github.com/pedroj/FRUBASE/commits/main)
+
 
 This is the page for the FRUBASE database, a huge dataset of fleshy fruit traits compiled from bibliographic references and my own work. Data are provided for more than 1000 plant species from all around the world.
 
