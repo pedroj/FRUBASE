@@ -1,8 +1,8 @@
 FRUBASE
 =======
 
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC_BY--NC--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 ![R](https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white)
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC_BY--NC--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 [![R-CMD-check](https://img.shields.io/badge/R--CMD--check-passing-brightgreen)](https://github.com/pedroj/FRUBASE/actions/workflows/R-CMD-check.yaml)
 [![R](https://img.shields.io/badge/R-passing-brightgreen)](https://github.com/pedroj/FRUBASE/actions/workflows/r.yml)
 [![Super-Linter](https://img.shields.io/badge/Super--Linter-passing-brightgreen)](https://github.com/pedroj/FRUBASE/actions/workflows/superlinter.yml)
