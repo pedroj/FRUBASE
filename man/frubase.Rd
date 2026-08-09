@@ -3,9 +3,11 @@
 \docType{data}
 \name{frubase}
 \alias{frubase}
-\title{FRUBASE: Fleshy fruit trait database}
+\title{FRUBASE dataset}
 \format{
-A data frame with 910 rows and 33 variables.
+A data frame with rows corresponding to plant species and columns
+describing taxonomy, fruit traits, nutritional traits, dispersers, and
+geographic information.
 
 A data frame with variables:
 \describe{
@@ -44,17 +46,18 @@ A data frame with variables:
 }
 }
 \source{
-Compiled by Pedro Jordano.
+Pedro Jordano and collaborators.
 
 \href{https://raw.githubusercontent.com/pedroj/FRUBASE/master/inst/extdata/frubase.tsv}{Data tsv archive}
 
 Dataset repository \url{https://github.com/pedroj/FRUBASE}.
 }
 \usage{
-frubase
+data(frubase)
 }
 \description{
-A dataset of fruit traits compiled from bibliographic references.
+A database of fleshy fruit traits compiled from bibliographic references
+and original work.
 
 This is the page for the FRUBASE database, a huge dataset of fleshy fruit
 traits compiled from bibliographic references and my own work. Data are
@@ -77,6 +80,9 @@ any other bug in the file. As well, please let me know about your uses of
 this data and send manuscripts and reprints when available.
 }
 \examples{
+data("frubase")
+head(frubase)
+summary(frubase)
 # ============================================================
 # FRUBASE - Example usage
 # Fleshy fruit traits database (>1000 plant species worldwide)

@@ -1,7 +1,14 @@
-#' FRUBASE: Fleshy fruit trait database
+#' FRUBASE dataset
 #'
-#' A dataset of fruit traits compiled from bibliographic references.
+#' A database of fleshy fruit traits compiled from bibliographic references
+#' and original work.
 #'
-#' @format A data frame with 910 rows and 33 variables.
-#' @source Compiled by Pedro Jordano.
-"frubase"
+#' @format A data frame with rows corresponding to plant species and columns
+#' describing taxonomy, fruit traits, nutritional traits, dispersers, and
+#' geographic information.
+#'
+#' @source Pedro Jordano and collaborators.
+#'
+#' @usage data(frubase)
+#' @name frubase
+NULL

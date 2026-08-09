@@ -70,6 +70,10 @@
 #' @importFrom downloader download
 #' @importFrom knitr kable
 #'
+#' @examples
+#' data("frubase")
+#' head(frubase)
+#' summary(frubase)
 #' @example inst/examples/examples.R
 #' @name frubase
 NULL
