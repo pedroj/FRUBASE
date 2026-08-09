@@ -16,8 +16,7 @@ This is the page for the FRUBASE database, a huge dataset of fleshy fruit traits
 
 Installation:
 ```r
-require("pak") # Using pak as `install_github()` 
-               # was deprecated in devtools 2.5.0.
+require("pak") # Using pak as `install_github()` was deprecated in devtools 2.5.0.
 pak::pak("pedroj/FRUBASE")
 
 library(frubase)
