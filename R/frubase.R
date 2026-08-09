@@ -21,8 +21,6 @@
 #'
 #' @docType data
 #'
-#' @format A dataset (dataframe)
-#'
 #' @keywords datasets
 #'
 #' @format A data frame with variables:
@@ -39,7 +37,7 @@
 #' \item{genlab}{Genus Label -   An 8-character label for genus.}
 #' \item{splab}{Species Label - An 8-character label for species.}
 #' \item{cod}{Species code -  A 5-character code for the species.}
-#' \item{dispcat}{Disperser type category - BIRDS, MIXED, MAMMALS.}
+#' \item{dispcat}{Disperser type category - Birds, Mixed, Mammals.}
 #' \item{disp}{Disperser type - Needs revision.}
 #' \item{area}{Geographic area - Major geographic areas of the data sources.}
 #' \item{fruit}{Fruit type - Type of fruit. Not completed. Needs revision.}
@@ -68,21 +66,10 @@
 #' @source Dataset repository \url{https://github.com/pedroj/FRUBASE}.
 #'
 #' @importFrom dplyr filter
+#' @importFrom dplyr n
 #' @importFrom downloader download
 #' @importFrom knitr kable
 #'
-#' @examples
-#' # Get the data from the GitHub repository.
-#' link <- "https://raw.githubusercontent.com/pedroj/FRUBASE/master/inst/extdata/frubase.tsv"
-#' file <- "frubase.tsv"
-#' if (!file.exists(file)) downloader::download(link, file, mode = "wb")
-#' frubase <- read.table(file, sep = "\t", dec = ".", 
-#'                       header = TRUE, na.strings="NA")
-#' head(frubase)
-#' #--------------------------------------------------------
-#' frubase |>
-#'         dplyr::filter(gen== "Prunus") 
-#' #--------------------------------------------------------
-
+#' @example inst/examples/examples.R
 #' @name frubase
 NULL
