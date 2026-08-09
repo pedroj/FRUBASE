@@ -1,5 +1,5 @@
 Package: frubase
-Title: FRUBASE, A Dataset Of Fleshy Fruit Traits
+Title: FRUBASE, a Dataset of Fleshy Fruit Traits
 Version: 4.0
 Date: 2007-12-12
 Authors@R: person("Pedro", "Jordano", email = "jordano@ebd.csic.es", role = c("aut", "cre"))
@@ -18,4 +18,4 @@ Suggests:
 Encoding: UTF-8
 LazyData: true
 LazyDataCompression: xz
-Config/roxygen2/version: 8.0.0
+Config/roxygen2/version: 8.1.0
