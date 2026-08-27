@@ -57,11 +57,11 @@ if (interactive()) {
   frubase |>
     dplyr::filter(!is.na(leng), !is.na(diam),
                   dispcat %in% c("Birds", "Mammals",
-                                 "Mixed")) |>  # ← title case
+                                 "Mixed")) |>
     ggplot(aes(x = leng, y = diam, colour = dispcat)) +
     geom_point(alpha = 0.4, size = 1.8) +
     geom_smooth(method = "lm", se = TRUE) +
-    scale_colour_manual(values = c("Birds"   = "#1b7837", # ← title case
+    scale_colour_manual(values = c("Birds"   = "#1b7837",
                                    "Mammals" = "#762a83",
                                    "Mixed"   = "#e08214")) +
     labs(
@@ -69,7 +69,7 @@ if (interactive()) {
       y        = "Fruit diameter, mm",
       colour   = "Disperser type",
       title    = "Fruit form/shape",
-      subtitle = "FRUBASE – Jordano 1995"
+      subtitle = "FRUBASE - Jordano 1995"
     ) +
     theme_bw()
 }
@@ -86,7 +86,7 @@ if (interactive()) {
     labs(
       x = "Lipid content",
       y = "Protein content",
-      title = "Lipid–protein trade-off in fleshy fruits"
+      title = "Lipid-protein trade-off in fleshy fruits"
     ) +
     theme_minimal()
 }
