@@ -1,0 +1,170 @@
+---
+title: "Exploring the FRUBASE fleshy-fruit trait database"
+author: "Pedro Jordano"
+output:
+  rmarkdown::html_vignette:
+    toc: true
+    toc_depth: 2
+vignette: >
+  %\VignetteIndexEntry{Exploring the FRUBASE fleshy-fruit trait database}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.width = 6,
+  fig.height = 4.5,
+  fig.align = "center"
+)
+# The vignette degrades gracefully if a suggested package is absent.
+has_dplyr   <- requireNamespace("dplyr", quietly = TRUE)
+has_ggplot2 <- requireNamespace("ggplot2", quietly = TRUE)
+has_knitr   <- requireNamespace("knitr", quietly = TRUE)
+```
+
+## Introduction
+
+`frubase` ships the **FRUBASE** database: fleshy-fruit traits for over 900
+Angiosperm plant species worldwide, compiled from published literature and
+original fieldwork (Jordano, P. 1995. *American Naturalist* **145**: 163-191).
+Each record combines taxonomy, fruit morphology, pulp and seed nutritional
+composition, disperser type, and geographic origin.
+
+Loading the data is a single call  -  no download step is required, the dataset
+travels with the package:
+
+```{r load}
+library(frubase)
+data(frubase)
+dim(frubase)
+```
+
+The 32 columns fall into four groups: taxonomy (`cl` ... `sp`, plus label and
+code columns), a disperser classification (`dispcat`, `disp`), the geographic
+`area`, and the numeric trait block (`leng` ... `fib`).
+
+```{r glimpse}
+str(frubase[, c("fam", "gen", "sp", "dispcat", "area",
+                "leng", "diam", "frfm", "lip", "pro")])
+```
+
+## Composition of the database
+
+How many species fall into each disperser category, and where do they come
+from?
+
+```{r counts, eval = has_dplyr}
+library(dplyr)
+
+frubase |>
+  count(dispcat, sort = TRUE)
+
+frubase |>
+  count(area, sort = TRUE) |>
+  head(8)
+```
+
+## Filtering by taxon
+
+The taxonomic columns make it straightforward to pull all records for a genus:
+
+```{r filter, eval = has_dplyr}
+frubase |>
+  filter(gen == "Prunus") |>
+  select(gen, sp, fam, dispcat, area, leng, diam, frfm)
+```
+
+## Fruit size by plant family
+
+A common summary is mean fruit diameter per family. This reproduces the
+family-level aggregation from the original FRUBASE analysis workflow:
+
+```{r family-summary, eval = has_dplyr}
+by_fam <- frubase |>
+  group_by(fam) |>
+  summarise(
+    n        = n(),
+    diam_avg = mean(diam, na.rm = TRUE),
+    diam_se  = sd(diam, na.rm = TRUE) / sqrt(sum(!is.na(diam))),
+    .groups  = "drop"
+  ) |>
+  filter(n >= 5) |>
+  arrange(desc(diam_avg))
+
+if (has_knitr) {
+  knitr::kable(head(by_fam, 10), digits = 2,
+               caption = "Ten families with the largest mean fruit diameter (n >= 5).")
+} else {
+  head(by_fam, 10)
+}
+```
+
+## Fruit size across disperser types
+
+Do bird-, mammal-, and mixed-dispersed fruits differ in size and pulp
+chemistry?
+
+```{r disperser-summary, eval = has_dplyr}
+frubase |>
+  filter(dispcat %in% c("Birds", "Mammals", "Mixed")) |>
+  group_by(dispcat) |>
+  summarise(
+    n         = n(),
+    mean_len  = mean(leng, na.rm = TRUE),
+    mean_diam = mean(diam, na.rm = TRUE),
+    mean_lip  = mean(lip,  na.rm = TRUE),
+    mean_pro  = mean(pro,  na.rm = TRUE),
+    .groups   = "drop"
+  )
+```
+
+```{r size-plot, eval = has_dplyr && has_ggplot2, fig.cap = "Fruit length vs. diameter, coloured by disperser type."}
+library(ggplot2)
+
+frubase |>
+  filter(!is.na(leng), !is.na(diam),
+         dispcat %in% c("Birds", "Mammals", "Mixed")) |>
+  ggplot(aes(leng, diam, colour = dispcat)) +
+  geom_point(alpha = 0.4, size = 1.6) +
+  geom_smooth(method = "lm", se = FALSE) +
+  scale_colour_manual(values = c(Birds   = "#1b7837",
+                                 Mammals = "#762a83",
+                                 Mixed   = "#e08214")) +
+  labs(x = "Fruit length (mm)", y = "Fruit diameter (mm)",
+       colour = "Disperser") +
+  theme_bw()
+```
+
+## Trait correlations and integration
+
+The numeric trait block supports morphology / nutrient correlation analyses.
+Following the original workflow, correlations are computed on log-transformed
+traits with pairwise-complete observations. Phenotypic *integration* is
+summarised as the variance of the eigenvalues of the correlation matrix  -  a
+larger value indicates traits that covary more tightly.
+
+```{r integration}
+numeric_block <- frubase[, c("diam", "frfm", "pdm", "sdm", "seeds", "seedm",
+                             "ry", "kjg")]
+cmat <- cor(log(numeric_block + 1), use = "pairwise.complete.obs")
+round(cmat, 2)
+
+eig <- eigen(cmat, only.values = TRUE)$values
+integration <- var(eig)
+cat("Eigenvalue variance (integration):", round(integration, 3), "\n")
+cat("Relative integration:", round(integration / ncol(cmat), 3), "\n")
+```
+
+```{r heatmap, fig.cap = "Correlation structure among morphological traits (log scale)."}
+heatmap(cmat, symm = TRUE, margins = c(6, 6),
+        col = gray((32:0) / 32))
+```
+
+## Session information
+
+```{r session}
+sessionInfo()
+```
