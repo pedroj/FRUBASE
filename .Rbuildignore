@@ -9,3 +9,8 @@ README.Rmd
 ^globi\.json$
 ^README_files$
 ^\.claude$
+^\.RData$
+^\.Rhistory$
+^frubase\.tsv$
+^inst/data-raw$
+\.DS_Store$

@@ -65,11 +65,6 @@
 #'
 #' @source Dataset repository \url{https://github.com/pedroj/FRUBASE}.
 #'
-#' @importFrom dplyr filter
-#' @importFrom dplyr n
-#' @importFrom downloader download
-#' @importFrom knitr kable
-#'
 #' @examples
 #' data("frubase")
 #' head(frubase)

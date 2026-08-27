@@ -1,19 +1,19 @@
 Package: frubase
 Title: FRUBASE, a Dataset of Fleshy Fruit Traits
 Version: 4.0
-Date: 2007-12-12
 Authors@R: person("Pedro", "Jordano", email = "jordano@ebd.csic.es", role = c("aut", "cre"))
-Description: A dataset including Angiosperm fleshy fruit characteristics.   
+Description: A database of fleshy fruit traits for over 900 Angiosperm plant
+    species worldwide, compiled from published literature and original
+    fieldwork. Records include taxonomy, fruit morphology (size and mass),
+    pulp and seed nutritional composition, disperser type, and geographic
+    origin.
 Depends:
     R (>= 4.1.0)
-License: GPL
+License: GPL-3
 URL: https://github.com/pedroj/FRUBASE
 BugReports: https://github.com/pedroj/FRUBASE/issues
-Imports:
-    dplyr,
-    downloader,
-    knitr
 Suggests:
+    dplyr,
     ggplot2
 Encoding: UTF-8
 LazyData: true
