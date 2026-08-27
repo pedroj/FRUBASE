@@ -6,7 +6,7 @@ Authors@R: person("Pedro", "Jordano", email = "jordano@ebd.csic.es", role = c("a
 Description: A dataset including Angiosperm fleshy fruit characteristics.   
 Depends:
     R (>= 3.5.0)
-License: CC0
+License: GPL
 URL: https://github.com/pedroj/FRUBASE
 BugReports: https://github.com/pedroj/FRUBASE/issues
 Imports:

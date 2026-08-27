@@ -6,7 +6,7 @@ output:
     highlight: default
 ---
 
-July 2007. Freiburg. Nov 2007, Sevilla. Nov 2018, Sevilla. Revision for v. 5 started in
+July 2007. Freiburg. Nov 2007, Sevilla. Nov 2018, Sevilla. Revision for v. 4 started in
 Sevilla, 17 Jan 2017.
 
 ### Data input, etc.
