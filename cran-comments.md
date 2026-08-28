@@ -6,7 +6,8 @@ FRUBASE database of fleshy fruit traits for over 900 Angiosperm species.
 ## Test environments
 
 * local macOS (aarch64), R 4.5.x
-* (add win-builder / R-hub / GitHub Actions results here before submitting)
+* ubuntu-latest
+* win
 
 ## R CMD check results
 
@@ -15,8 +16,6 @@ FRUBASE database of fleshy fruit traits for over 900 Angiosperm species.
 * checking CRAN incoming feasibility ... NOTE
   Maintainer: 'Pedro Jordano <jordano@ebd.csic.es>'
   New submission
-
-  Expected for a first-time submission.
 
 ## Downstream dependencies
 
