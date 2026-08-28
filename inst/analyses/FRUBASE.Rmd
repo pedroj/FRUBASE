@@ -7,7 +7,7 @@ output:
 ---
 
 July 2007. Freiburg. Nov 2007, Sevilla. Nov 2018, Sevilla. Revision for v. 4 started in
-Sevilla, 17 Jan 2017.
+Sevilla, 17 Jan 2017. CRAN version Zahara de los Atunes, Aug 2026.
 
 ### Data input, etc.
 
@@ -30,6 +30,7 @@ frubase <- read.table(file,
 )
 
 save(frubase, file = here::here("data/frubase.RData"))
+
 ```
 
 Prepare dataset.
@@ -47,6 +48,7 @@ if (!has_name(frubase, "species")) {
 }
 
 str(frubase)
+
 ```
 
 ### Filtering
@@ -69,6 +71,7 @@ by_fam.diam <- frubase |>
   )
 
 kable(by_fam.diam)
+
 ```
 
 ### Taxa names check
@@ -94,6 +97,7 @@ mylist_tnrs <- mylist_tnrs[, !names(mylist_tnrs) %in%
 mylist_tnrs_df <- as_tibble(mylist_tnrs)
 
 mylist_final <- as.character(mylist_tnrs$acceptedname)
+
 ```
 
 Note the scores. They suggest that there were no perfect matches, but they were all very
@@ -110,6 +114,7 @@ sources$title
 eol <- sources$id[sources$title == "EOL"]
 out <- gnr_resolve(splist, data_source_ids = eol, stripauthority = TRUE)
 unique(out$results)
+
 ```
 
 ### Datasets and analyses
@@ -173,5 +178,6 @@ correl.frub <- correlogram.formula(
   use = "pairwise.complete.obs"
 )
 # ---------------------------------------------------------------------------
+
 ```
 
